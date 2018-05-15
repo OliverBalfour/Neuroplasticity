@@ -2,10 +2,10 @@
 \contentsline {section}{Literature Review}{2}
 \contentsline {section}{Background Information}{2}
 \contentsline {subsection}{Neural Networks}{2}
-\contentsline {subsection}{Glossary}{3}
-\contentsline {section}{Method}{4}
-\contentsline {section}{Results}{4}
-\contentsline {section}{Discussion}{4}
-\contentsline {section}{Conclusion}{4}
-\contentsline {section}{Appendices}{4}
-\contentsline {subsection}{Appendix I: Source Code}{4}
+\contentsline {section}{Method}{3}
+\contentsline {section}{Results}{3}
+\contentsline {section}{Discussion}{3}
+\contentsline {section}{Conclusion}{3}
+\contentsline {section}{Appendices}{3}
+\contentsline {subsection}{Appendix I: Source Code}{3}
+\contentsline {subsection}{Glossary}{4}
