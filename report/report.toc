@@ -1,11 +1,12 @@
-\contentsline {section}{Introduction}{2}
-\contentsline {section}{Literature Review}{2}
-\contentsline {section}{Background Information}{2}
-\contentsline {subsection}{Neural Networks}{2}
-\contentsline {section}{Method}{3}
-\contentsline {section}{Results}{3}
-\contentsline {section}{Discussion}{3}
-\contentsline {section}{Conclusion}{3}
-\contentsline {section}{Appendices}{3}
-\contentsline {subsection}{Appendix I: Source Code}{3}
-\contentsline {subsection}{Glossary}{4}
+\contentsline {section}{Introduction}{3}
+\contentsline {section}{Literature Review}{3}
+\contentsline {section}{Background Information}{4}
+\contentsline {subsection}{Neural Networks}{4}
+\contentsline {section}{Method}{5}
+\contentsline {section}{Results}{5}
+\contentsline {section}{Discussion}{5}
+\contentsline {section}{Conclusion}{5}
+\contentsline {section}{Appendices}{5}
+\contentsline {subsection}{Appendix I: Source Code}{5}
+\contentsline {subsection}{Appendix II: Implementation Details}{5}
+\contentsline {subsection}{Glossary}{5}
