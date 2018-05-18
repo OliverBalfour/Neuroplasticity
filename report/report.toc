@@ -10,16 +10,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Method}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Results}{4}
+\contentsline {section}{Results}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Discussion}{4}
+\contentsline {section}{Discussion}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Conclusion}{4}
+\contentsline {section}{Conclusion}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Appendices}{4}
+\contentsline {section}{Appendices}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Appendix I: Source Code}{4}
+\contentsline {subsection}{Appendix I: Implementation Details}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Appendix II: Implementation Details}{4}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Glossary}{5}
+\contentsline {subsection}{Glossary}{6}

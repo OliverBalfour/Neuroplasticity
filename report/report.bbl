@@ -19,6 +19,269 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
+    \entry{bennett1964chemical}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,uniquepart=base,hash=e134538e7f28a38a531060045a61c2f0}{%
+           family={Bennett},
+           familyi={B\bibinitperiod},
+           given={Edward\bibnamedelima L},
+           giveni={E\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=29ec1683f01b5d035fc98afb877e6388}{%
+           family={Diamond},
+           familyi={D\bibinitperiod},
+           given={Marian\bibnamedelima C},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6ad1b8ec7dbd0e05a57d8dab5e3538d7}{%
+           family={Krech},
+           familyi={K\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=efd47a9ab08e7bc6edc2d1915a506c7f}{%
+           family={Rosenzweig},
+           familyi={R\bibinitperiod},
+           given={Mark\bibnamedelima R},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
+      }
+      \strng{namehash}{4e4c7959d5a22a0fae5a2d90fba54299}
+      \strng{fullhash}{d8411dece07c15b6298c132a531e4395}
+      \strng{bibnamehash}{4e4c7959d5a22a0fae5a2d90fba54299}
+      \strng{authorbibnamehash}{4e4c7959d5a22a0fae5a2d90fba54299}
+      \strng{authornamehash}{4e4c7959d5a22a0fae5a2d90fba54299}
+      \strng{authorfullhash}{d8411dece07c15b6298c132a531e4395}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{3644}
+      \field{title}{Chemical and anatomical plasticity of brain}
+      \field{volume}{146}
+      \field{year}{1964}
+      \field{pages}{610\bibrangedash 619}
+      \range{pages}{10}
+    \endentry
+    \entry{vapnik1995support}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=17acda211a651e90e228f1776ee07818}{%
+           family={Cortes},
+           familyi={C\bibinitperiod},
+           given={Corinna},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=c2b3e05872463585b4be6aab10d10d63}{%
+           family={Vapnik},
+           familyi={V\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{4c67d5268f413e83454c8adc14ab43c3}
+      \strng{fullhash}{4c67d5268f413e83454c8adc14ab43c3}
+      \strng{bibnamehash}{4c67d5268f413e83454c8adc14ab43c3}
+      \strng{authorbibnamehash}{4c67d5268f413e83454c8adc14ab43c3}
+      \strng{authornamehash}{4c67d5268f413e83454c8adc14ab43c3}
+      \strng{authorfullhash}{4c67d5268f413e83454c8adc14ab43c3}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Machine learning}
+      \field{number}{3}
+      \field{title}{Support-vector networks}
+      \field{volume}{20}
+      \field{year}{1995}
+      \field{pages}{273\bibrangedash 297}
+      \range{pages}{25}
+    \endentry
+    \entry{draganski2004neuroplasticity}{article}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,uniquepart=base,hash=f11a45b9cb6b8fb77163d6e4ba271b0d}{%
+           family={Draganski},
+           familyi={D\bibinitperiod},
+           given={Bogdan},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=b685ff097d0d70aba5da00750d0c5e45}{%
+           family={Gaser},
+           familyi={G\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=38288974a2d024c00978f72b45a33895}{%
+           family={Busch},
+           familyi={B\bibinitperiod},
+           given={Volker},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=08fb214d563167c5279fbdf2937fba99}{%
+           family={Schuierer},
+           familyi={S\bibinitperiod},
+           given={Gerhard},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=1c5f1b608d7f4750b0238ecd81d73f26}{%
+           family={Bogdahn},
+           familyi={B\bibinitperiod},
+           given={Ulrich},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=4c9c85149e1f9a3b50d7c1cca3031025}{%
+           family={May},
+           familyi={M\bibinitperiod},
+           given={Arne},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{9c02ef8e93cfa80061b06467e85bd809}
+      \strng{fullhash}{9ed27c9588e93e1de6966b00606a6277}
+      \strng{bibnamehash}{9c02ef8e93cfa80061b06467e85bd809}
+      \strng{authorbibnamehash}{9c02ef8e93cfa80061b06467e85bd809}
+      \strng{authornamehash}{9c02ef8e93cfa80061b06467e85bd809}
+      \strng{authorfullhash}{9ed27c9588e93e1de6966b00606a6277}
+      \field{sortinit}{D}
+      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{number}{6972}
+      \field{title}{Neuroplasticity: changes in grey matter induced by training}
+      \field{volume}{427}
+      \field{year}{2004}
+      \field{pages}{311}
+      \range{pages}{1}
+    \endentry
+    \entry{grace2017will}{article}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,uniquepart=base,hash=07b501c7edee8ed488de1f42d1a5ca02}{%
+           family={Grace},
+           familyi={G\bibinitperiod},
+           given={Katja},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=05c761e203cc6c586605836fa4676d10}{%
+           family={Salvatier},
+           familyi={S\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=f8465387f1aef0e52a00f2712e5f31a1}{%
+           family={Dafoe},
+           familyi={D\bibinitperiod},
+           given={Allan},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=894ef0008f880e762c765b732d9c0d52}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Baobao},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6b07bfe62c5870808c4d460a3275f391}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={Owain},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{26f46b9ebbab7d0b68f93ed85757aadf}
+      \strng{fullhash}{f8b16392178c26be2c73a83b4c30de0d}
+      \strng{bibnamehash}{26f46b9ebbab7d0b68f93ed85757aadf}
+      \strng{authorbibnamehash}{26f46b9ebbab7d0b68f93ed85757aadf}
+      \strng{authornamehash}{26f46b9ebbab7d0b68f93ed85757aadf}
+      \strng{authorfullhash}{f8b16392178c26be2c73a83b4c30de0d}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1705.08807}
+      \field{title}{When will AI exceed human performance? Evidence from AI experts}
+      \field{year}{2017}
+    \endentry
+    \entry{perwej12}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=c4e893f95da7cb94bc4bc74acb0ada7f}{%
+           family={Perwej},
+           familyi={P\bibinitperiod},
+           given={Yusuf},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=382045eab938ae127ef2d94272603da8}{%
+           family={Parwej},
+           familyi={P\bibinitperiod},
+           given={Firoj},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7306bb46e3272caa500d8648fe65e25f}
+      \strng{fullhash}{7306bb46e3272caa500d8648fe65e25f}
+      \strng{bibnamehash}{7306bb46e3272caa500d8648fe65e25f}
+      \strng{authorbibnamehash}{7306bb46e3272caa500d8648fe65e25f}
+      \strng{authornamehash}{7306bb46e3272caa500d8648fe65e25f}
+      \strng{authorfullhash}{7306bb46e3272caa500d8648fe65e25f}
+      \field{sortinit}{P}
+      \field{sortinithash}{24100cef455d7974167575052c29146e}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Scientific \& Engineering Research}
+      \field{title}{A Neuroplasticity (Brain Plasticity) Approach to Use in Artificial Neural Network}
+      \field{year}{2012}
+      \field{dateera}{ce}
+    \endentry
+    \entry{rosenblatt1958perceptron}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=9e8511ef13d0cdda3a709b93fa650e71}{%
+           family={Rosenblatt},
+           familyi={R\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Psychological Association}%
+      }
+      \strng{namehash}{9e8511ef13d0cdda3a709b93fa650e71}
+      \strng{fullhash}{9e8511ef13d0cdda3a709b93fa650e71}
+      \strng{bibnamehash}{9e8511ef13d0cdda3a709b93fa650e71}
+      \strng{authorbibnamehash}{9e8511ef13d0cdda3a709b93fa650e71}
+      \strng{authornamehash}{9e8511ef13d0cdda3a709b93fa650e71}
+      \strng{authorfullhash}{9e8511ef13d0cdda3a709b93fa650e71}
+      \field{sortinit}{R}
+      \field{sortinithash}{c15bc8eb6936bc6b3c8baa9e8575af53}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychological review}
+      \field{number}{6}
+      \field{title}{The perceptron: a probabilistic model for information storage and organization in the brain.}
+      \field{volume}{65}
+      \field{year}{1958}
+      \field{pages}{386}
+      \range{pages}{1}
+    \endentry
     \entry{dropout14}{article}{}
       \name{author}{5}{}{%
         {{uniquename=0,uniquepart=base,hash=6a147afa4569ce6cf23c0436e65d8486}{%

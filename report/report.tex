@@ -25,7 +25,7 @@
 \maketitle
 
 \begin{abstract}
-	In this experiment the neuroplasticity of neural networks, both artificial and biological, was tested. Several configurations of computing machines, ranging from simple feed-forward Artificial Neural Networks (ANNs) to more complex Recurrent Neural Networks (RNNs) and Convolutional Neural Networks (CNNs), were tested, with the human brain as a baseline for performance. Also tested was a Support Vector Machine (SVM), a much older algorithm with a mathematical and not biologically-inspired approach to classification, to gauge how far the field of Machine Learning has come in the past decades both in terms of performance and neuroplasticity. Each machine was tested (with minor alterations to the input and output layers of each artificial model to account for differing input sizes) against several different classification and regression problems including but not limited to classifying handwritten digits (using the MNIST dataset), classifying the genus of irises given their petal measurements (the Iris problem), and estimating house prices. The neuroplasticity of each model was then evaluated based on the overall performance of each model in each of the problems tested.
+	In this experiment the neuroplasticity of neural networks, both artificial and biological, was tested. Several configurations of computing machines, ranging from simple feed-forward Artificial Neural Networks (ANNs) to more complex Recurrent Neural Networks (RNNs) and Convolutional Neural Networks (CNNs), were tested, with the human brain as a baseline for performance. Also tested was a Support Vector Machine (SVM), a much older algorithm with a mathematical and not biologically-inspired approach to classification, to gauge how far the field of Machine Learning has come in the past decades both in terms of performance and neuroplasticity. Each machine was tested (with minor alterations to the input and output layers of each artificial model to account for differing input sizes) against several different classification and regression problems including but not limited to classifying handwritten digits (using the MNIST dataset) and performing sentiment analysis on highly polarized movie reviews (using the SAR14 IMDb review dataset). The neuroplasticity of each model was then evaluated based on the overall performance of each model in each of the problems tested.
 \end{abstract}
 
 \tableofcontents
@@ -33,44 +33,26 @@
 
 \section{Introduction}
 
-The aim of this experiment is to determine how far behind in terms of neuroplasticity modern Artificial Neural Networks (ANNs) are when compared with the human brain.
+The human brain is capable of rewiring itself throughout its lifetime (\cite{draganski2004neuroplasticity}). This feature, known as neuroplasticity, is the primary force behind the process of learning, and is present in a wide range of animals. It was first discovered in rats in the 1960s (\cite{bennett1964chemical}), and has applications as far as machine learning. In this experiment, the extent to which Artificial Neural Networks (ANNs) exhibit neuroplasticity is tested, by training the same ANNs to perform very diverse tasks.
+
+The aim of this experiment is to determine how far behind in terms of neuroplasticity modern Artificial Neural Networks (ANNs) are when compared with the human brain. This is done by training the same artificial and biological neural network configurations to perform several different classification and regression tasks, and measuring the standard deviation of the error rates across each problem as a measure of neuroplasticity.
 
 It is hypothesised that:
 \begin{enumerate}
-	\item The human brain will marginally surpass state-of-the-art ANN configurations, and will perform well in all problem domains.
-	\item The Convolutional Neural Network (CNN) will excel at digit recognition but not at estimating house prices or classifying iris genuses.
+	\item The human brain will marginally surpass state-of-the-art ANN configurations, and will perform exceptionally well in all problem domains.
+	\item The Convolutional Neural Network (CNN) will excel at digit recognition but not at classifying iris genuses or performing sentiment analysis.
 	\item The Recurrent Neural Network (RNN) will perform well on all problems.
-	\item The basic feed-forward Artificial Neural Network (ANN) will perform acceptably on all problems.
-	\item The Support Vector Machine (SVM) will perform well on the Iris classification problem but perform sub-par on all other problems.
-\end{enumerate}
-
-Measure the neuroplasticity of various neural network configurations by testing how well they fit to various classification and regression problems.
-
-Problems: (all datasets available from UCI)
-\begin{enumerate}
-	\item MNIST digit recognition
-	\item Iris classification (Fisher's dataset)
-	\item Possibly sentiment analysis, but include disclaimer saying it's not going to fit well to the models due to their simplicity.
-	\item Breast cancer diagnosis dataset? Could be interesting
-	\item Residential building dataset (construction/sale prices etc.)
-\end{enumerate}
-
-Configurations:
-\begin{enumerate}
-	\item Standard feed-forward artificial neural network, 1 hidden layer
-	\item Feed-forward ANN, but with 2 hidden layers
-	\item Recurrent neural network, 1 hidden layer
-	\item RNN, 2 hidden layers
-	\item Support Vector Machine (SVM), to show the inefficiency of traditional mathematical or logical approaches compared to biologically inspired
-	\item Human Brain as a control variable? Use 2/3 people as test subject
+	\item The standard densely-layered feed-forward Artificial Neural Network (ANN) will perform acceptably on all problems.
+	\item The Support Vector Machine (SVM) will perform well recognising handwritten digits and classifying iris genuses, but will perform sub-par on all other problems.
 \end{enumerate}
 
 \section{Literature Review}
 
-https://www.ijser.org/researchpaper/A-Neuroplasticity-Brain-Plasticity-Approach-to-Use-in-Artificial-Neural-Network.pdf
+Whilst there is plenty of literature on machine learning and neuroplasticity as separate topics, there is very little directly relating to both. The only publicly available scientific paper relating directly to both merely documents a method for making an ANN neuroplastic (\cite{perwej12}), however its approach is essentially a synaptic pruning method for reducing overfitting in ANNs identical to the well-established method of neural network dropout (\cite{dropout14}). The only other paper referring to both generally is behind a journal paywall.
 
-https://www.sciencedirect.com/science/article/pii/S0893608015002567
+This investigation focuses on a neglected area of machine learning: as machine learning and artificial intelligence research is primarily focused on researching highly specialised cutting-edge techniques, investigation into the re-usability and adaptivity of neural networks has been left behind. Considering that a true artificial intelligence requires an extremely plastic brain to be capable of learning without requiring different sub-networks for each individual task it is able to perform, this investigation is important as a measure of the level of progress that the field of artificial intelligence has achieved toward an Artificial General Intelligence (AGI).
 
+The techniques used to create neural networks in this experiment, however, are very well documented. The perceptron, an outdated artificial model of a neuron, was documented thoroughly by its creator (\cite{rosenblatt1958perceptron}); likewise, the original Support Vector Machine algorithm was well documented (\cite{vapnik1995support}).
 
 \section{Background Information}
 
@@ -79,31 +61,79 @@ A neural network is essentially a simplified computer abstraction of a brain, wi
 
 A neuron is typically represented by a series of numbers: an activation threshold (bias), and a series of numbers representing the strengths of connections with neurons in the previous layer. Given the outputs (activations) of the neurons in the previous layer (or given the input data from the host program in the case of the input layer), a neuron's output (activation) will equal the sum of all of previous layer's neurons activations multiplied by the connection strengths (weights), with the activation threshold (bias) of the neuron in question being subtracted. In a more traditional perceptron model, the output would be transformed such that if it is positive it is a binary 1, and if it is negative it is a binary 0; however more modern sigmoid models usually transform this value into a floating-point decimal between 0 and 1 using a learning function.
 
-\begin{Equation}
-\begin{equation}
-n_a = \sum_{i=0}^{|M|}(M_{i_a} M_{i_w}) - n_b
-\end{equation}
-\caption{Activation of an artificial neutron}
-\end{Equation}
-
-In the above equation, \(m\) is the set of neurons from the previous layer, \(M_{i_w}\) is the weight (or axon-dendrite connection strength) of the \emph{i}th neuron, and \(M_{i_a}\) denotes the activation (output value, a floating-point number from 0 to 1 transformed by a learning function); \(n\) is the neuron whose output is being calculated and \(n_b\) its bias (activation/firing threshold.)so the above formula boils down to adding all of the connection weights multiplied by the outputs, and then subtracting the bias. A negative value means the neuron does not fire, as the threshold has not beenreached, and a positive the opposite. The output is wrapped in a function to make the output smoother and more efficient at learning, but that is an irrelevant implementation detail.
-
-The weights and biases of each neuron and neuronal connection are optimised to serve a specific purpose through the process of training. Usually, these values will start as random numbers, and through a process known as Stochastic Gradient Descent the values are slowly optimised until the neural network model is sufficiently good at its task. (Refer to the glossary on page \pageref{itm:SGD} for more information on Stochastic Gradient Descent.) There are many applications for neural networks: A neural network may be trained to classify images (computer vision and optical character recognition), to estimate data such as house or stock prices given data about their respective markets, or even to control robots. This universiality, or neuroplasticity, is investigated in this report.
+In this experiment, both perceptron and sigmoid neurons are tested, as well as a Support Vector Machine (SVM), which is an older algorithm designed for classification problems.
 
 \begin{Equation}
 \begin{equation}
 n_a = \left\{ \begin{array}{ll}
-	0 & \mbox{if } \sum_i M_{i_a} M_{i_w} \leq n_b \\
-	1 & \mbox{if } \sum_i M_{i_a} M_{i_w} > n_b
+0 & \mbox{if } \sum_i M_{i_a} M_{i_w} \leq n_b \\
+1 & \mbox{if } \sum_i M_{i_a} M_{i_w} > n_b
 \end{array}\right.
 \end{equation}
-\caption{Activation (output value) of a perceptron}
+\caption{Activation (output value) of a perceptron.}
 \end{Equation}
 
+\begin{Equation}
+\begin{equation}
+n_a = \sum_{i=0}^{|M|}(M_{i_a} M_{i_w}) - n_b
+\end{equation}
+\caption{Activation of an artificial sigmoid neuron before applying a learning function.}
+\end{Equation}
+
+In the above equations, \(M\) is the set of neurons from the previous layer, \(M_{i_w}\) is the weight (or axon-dendrite connection strength) of the \emph{i}th neuron, and \(M_{i_a}\) denotes the activation (output value, a floating-point number from 0 to 1 transformed by a learning function); \(n\) is the neuron whose output is being calculated and \(n_b\) its bias (activation/firing threshold.)so the above formula boils down to adding all of the connection weights multiplied by the outputs, and then subtracting the bias. In the sigmoid model, a negative value means the neuron does not fire, as the threshold has not been reached, and a positive the opposite. The output is wrapped in a function to make the output smoother and more efficient at learning, but that is an irrelevant implementation detail. In the perceptron model, a negative value is replaced with a 0 and a positive with a 1.
+
+The weights and biases of each neuron and neuronal connection are optimised to serve a specific purpose through the process of training. Usually, these values will start as random numbers, and through a process known as Stochastic Gradient Descent the values are slowly optimised until the neural network model is sufficiently good at its task. (Refer to the glossary on page \pageref{itm:SGD} for more information on Stochastic Gradient Descent.) There are many applications for neural networks: A neural network may be trained to classify images (computer vision and optical character recognition), to estimate data such as house or stock prices given data about their respective markets, or even to control robots. This adaptivity, or neuroplasticity, is investigated in this report.
 
 \section{Method}
 
+There are 7 neural networks tested in this experiment, against 4 different classification and regression problems, each in different problem domains. The neural network configurations are listed below:
+
+\begin{enumerate}
+	\item A Support Vector Machine (SVM), to show the inefficiency of traditional mathematical or logical approaches compared to biologically inspired.
+	\item A densely-layered feed-forward Artificial Neural Network (ANN) using perceptrons instead of sigmoid neurons.
+	\item A standard densely-layered feed-forward ANN, with 1 hidden layer.
+	\item A standard ANN like above, but with 2 hidden layers.
+	\item A Recurrent Neural Network (RNN), with 1 hidden layer.
+	\item A RNN with 2 hidden layers.
+	\item And as a baseline for performance and neuroplasticity, several people are used.
+\end{enumerate}
+
+Each of the above models will be tested against the following classification and regression problems:
+
+\begin{enumerate}
+	\item Handwritten digit recognition (using the MNIST dataset)\footnote{The MNIST dataset is available at: http://yann.lecun.com/exdb/mnist/}
+	\item Iris flower classification (using Fisher's dataset\footnote{The Iris dataset is available at: http://archive.ics.uci.edu/ml/datasets/Iris})
+	\item Sentiment analysis (using the SAR14 dataset of IMDb movie reviews)
+	\item Breast cancer diagnosis (using the University of Wisconsin dataset\footnote{The Breast Cancer diagnosis dataset is available at: http://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)})
+\end{enumerate}
+
+To make the experiment as fair as possible, the data was delivered to people involved in the experiment in the same way that the data was delivered to all of the artificial models: in numerical form. That way, the same part of the neocortex will be used for all of the problems, making it a fair test of neuroplasticity; and also, the visual and linguistic cortices will not be used, which would otherwise deliver an unfair advantage over the untrained artificial models used in the experiment.
+
+The experiment happened in two phases for each combination of model (artificial or biological) and problem: the training phase, and the testing phase.
+
+In the training phase, the artificial models are fed data along with the desired results from the respective datasets and left to their own devices. The people involved in the experiment are given the data similarly; however the data is printed and arranged in a more familiar tabular format.
+
+In the testing phase, each model and participant is given data as in the previous stage, however the desired results are omitted, and the models and participants have to make predictions (or classifications, depending on the nature of the problem) based on inferences made from the training data. Note that participants are allowed to keep a copy of the training data for reference.
+
+For each model-problem combination, two metrics were measured:
+
+\begin{enumerate}
+	\item Performance, a measure of the accuracy of the model or participant in the testing phase.
+	\item Neuroplasticity, calculated as the standard deviation of the performance of the model or participant across all of the problems tested.
+\end{enumerate}
+
+\begin{Equation}
+	\begin{equation}
+	\sqrt{\frac{(\sum_{i=0}^{|P|}P_i - m)^2}{|P|}}
+	\end{equation}
+	\caption{Calculation of neuroplasticity.}
+\end{Equation}
+
+In the above equation, \(P\) is the set of performance metrics for a model or participant, and \(m\) is the mean (average) of the set \(P\).
+
 \section{Results}
+
+
 
 \section{Discussion}
 
@@ -111,18 +141,18 @@ n_a = \left\{ \begin{array}{ll}
 
 \section{Appendices}
 
-\subsection{Appendix I: Source Code}
+\subsection{Appendix I: Implementation Details}
 
-The Python 3 source code for all of the aforementioned experiments are available online through the Git repository hosted at following URL: https://github.com/Tobsta/ScienceFair
+The Python 3 source code files for all of the aforementioned artificial models are available online through the Git repository hosted at following URL: https://github.com/Tobsta/ScienceFair
 
-\subsection{Appendix II: Implementation Details}
-
-All of the deep learning models tested were implemented in the Python 3 programming language, using the Keras machine learning library.
+All of the deep learning models tested were implemented in the Python 3 programming language, using the Keras machine learning library with a TensorFlow backend.
 
 \twocolumn
 \subsection{Glossary}
 \begin{description}
 \item[Activation function:] See \textit{Learning Function}
+
+\item[Artificial General Intelligence (AGI):] An AGI is an intelligent agent capable of learning to accomplish many general tasks at least as well as a human, as opposed to specialising in a particular task. At this stage, AGIs are mostly a topic of science fiction and radical speculation; however many experts believe that general intelligence is mere decades away. In a survey of prominent AI researchers, the median estimation for when there is a 50\% chance of AGIs having been developed was 50 years (\cite{grace2017will}).
 
 \item[Artificial Neural Network (ANN):] An interconnected network of artificial (ie. simulated) neurons that receive signals (in the form of binary or floating point numbers) as input, which pass through the connections between nodes in the network toward the output layer of neurons which emits a computed result. Simple ANNs typically contain an input layer, one or more hidden layers, and an output layer.
 
@@ -160,7 +190,7 @@ All of the deep learning models tested were implemented in the Python 3 programm
 
 \item[Regression problem:] A regression problem is a style of problem where a model is trained to find the relationship between input and output data. One example of a regression problem is estimating the selling price of a house given data on it (number of bedrooms, size of the block, etc.)	
 
-\item[ReLU] ReLUs (Rectified Linear Units) are a simple activation (learning) function that returns linearly unless the input is less than 0, in which case it returns 0.
+\item[ReLU] ReLUs (Rectified Linear Units) are a simple activation (learning) function that returns the input or 0, whichever is greater.
 
 \item[Sigmoid function:] The sigmoid function is a learning function that creates an S-shaped curve.
 

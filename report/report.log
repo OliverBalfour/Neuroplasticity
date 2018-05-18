@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.8)  18 MAY 2018 12:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.8)  18 MAY 2018 20:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -421,62 +421,67 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
  [1
 
-]
-Overfull \hbox (11.13475pt too wide) in paragraph at lines 70--71
-\OT1/cmr/m/n/10 https://www.ijser.org/researchpaper/A-Neuroplasticity-Brain-Pla
-sticity-Approach-to-Use-in-Artificial-Neural-
+] [2] [3]
+Overfull \hbox (34.29254pt too wide) in paragraph at lines 107--107
+[][]\OT1/cmr/m/n/8 The Breast Can-cer di-ag-no-sis dataset is avail-able at: ht
+tp://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)| 
  []
 
-[2] [3] [4]
-Overfull \hbox (1.0939pt too wide) in paragraph at lines 127--128
+[4] [5]
+Overfull \hbox (5.05794pt too wide) in paragraph at lines 155--156
+[]\OT1/cmr/m/n/10 An AGI is
+ []
+
+
+Overfull \hbox (1.0939pt too wide) in paragraph at lines 157--158
 []\OT1/cmr/m/n/10 An in-ter-con-
  []
 
 
-Overfull \hbox (6.9562pt too wide) in paragraph at lines 127--128
+Overfull \hbox (6.9562pt too wide) in paragraph at lines 157--158
 \OT1/cmr/m/n/10 net-work to-ward the out-put layer of neu-rons which
  []
 
 
-Overfull \hbox (1.29732pt too wide) in paragraph at lines 129--130
+Overfull \hbox (1.29732pt too wide) in paragraph at lines 159--160
 []\OT1/cmr/m/n/10 A clas-si-fi-ca-tion prob-lem is
  []
 
 
-Overfull \hbox (0.62039pt too wide) in paragraph at lines 131--132
+Overfull \hbox (0.62039pt too wide) in paragraph at lines 161--162
 []\OT1/cmr/m/n/10 A neu-
  []
 
 
-Overfull \hbox (8.01796pt too wide) in paragraph at lines 137--138
+Overfull \hbox (8.01796pt too wide) in paragraph at lines 167--168
 []\OT1/cmr/m/n/10 Feed-forward ANNs are a class
  []
 
 
-Overfull \hbox (3.37291pt too wide) in paragraph at lines 141--142
+Overfull \hbox (3.37291pt too wide) in paragraph at lines 171--172
 \OT1/cmr/m/n/10 which doesn't take in-put from the pre-vi-ous layer,
  []
 
 
-Overfull \hbox (0.70615pt too wide) in paragraph at lines 157--158
+Overfull \hbox (0.70615pt too wide) in paragraph at lines 187--188
 \OT1/cmr/m/n/10 as a small change in in-puts cre-ates a much larger
- []
-
-
-Overfull \hbox (6.43633pt too wide) in paragraph at lines 161--162
-[]\OT1/cmr/m/n/10 A re-gres-sion prob-lem is a style
- []
-
-[5
-
-]
-Overfull \hbox (1.1163pt too wide) in paragraph at lines 168--169
-[]\OT1/cmr/m/n/10 A method
  []
 
 [6
 
-] [7
+]
+Overfull \hbox (6.43633pt too wide) in paragraph at lines 191--192
+[]\OT1/cmr/m/n/10 A re-gres-sion prob-lem is a style
+ []
+
+
+Overfull \hbox (1.1163pt too wide) in paragraph at lines 198--199
+[]\OT1/cmr/m/n/10 A method
+ []
+
+[7
+
+] [8
 
 
 ] (./report.aux)
@@ -485,13 +490,13 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 8905 strings out of 492982
- 157989 string characters out of 6138580
- 567846 words of memory out of 5000000
- 12425 multiletter control sequences out of 15000+600000
+ 8932 strings out of 492982
+ 158766 string characters out of 6138580
+ 568300 words of memory out of 5000000
+ 12452 multiletter control sequences out of 15000+600000
  9316 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,45p,1198b,1149s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,8n,47p,1192b,1149s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/publ
@@ -500,15 +505,16 @@ ic/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
 sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmtt10.pfb>
-Output written on report.pdf (9 pages, 181206 bytes).
+ts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb>
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.
+pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on report.pdf (10 pages, 214628 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 105 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
