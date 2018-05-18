@@ -1,5 +1,14 @@
 \documentclass[]{report}
 
+\setcounter{secnumdepth}{0}
+\usepackage[margin=1in]{geometry}
+\usepackage{caption}
+\usepackage{parskip}
+\usepackage{float}
+\newfloat{Equation}{H}{lop}
+\usepackage[backend=biber, style=authoryear]{biblatex}
+\addbibresource{./report.bib}
+
 \title{
 	The Relative Neuroplasticity of Artificial
 	\linebreak
@@ -7,12 +16,10 @@
 }
 \author{Oliver Balfour}
 
-\setcounter{secnumdepth}{0}
-\usepackage[margin=1in]{geometry}
-\usepackage{caption}
-\usepackage{parskip}
-\usepackage{float}
-\newfloat{Equation}{H}{lop}
+\date{%
+	Alfred Deakin High School\\[2ex]%
+	\today
+}
 
 \begin{document}
 \maketitle
@@ -22,7 +29,6 @@
 \end{abstract}
 
 \tableofcontents
-\listof{Equation}{List of Equations}
 \newpage
 
 \section{Introduction}
@@ -113,9 +119,11 @@ The Python 3 source code for all of the aforementioned experiments are available
 
 All of the deep learning models tested were implemented in the Python 3 programming language, using the Keras machine learning library.
 
+\twocolumn
 \subsection{Glossary}
-
 \begin{description}
+\item[Activation function:] See \textit{Learning Function}
+
 \item[Artificial Neural Network (ANN):] An interconnected network of artificial (ie. simulated) neurons that receive signals (in the form of binary or floating point numbers) as input, which pass through the connections between nodes in the network toward the output layer of neurons which emits a computed result. Simple ANNs typically contain an input layer, one or more hidden layers, and an output layer.
 
 \item[Classification problem:] A classification problem is a type of machine learning problem in which a model is trained to classify data according to a few predefined classes. Examples include Optical Character Recognition and Computer Vision problems; the most common of which is handwritten digit recognition.
@@ -124,6 +132,8 @@ All of the deep learning models tested were implemented in the Python 3 programm
 
 \item[Cost function:] The cost function estimates the accuracy (error frequency) of a model; lower is better.
 
+\item[Dropout:] Dropout is a technique to avoid overfitting in ANNs. It works by randomly removing nodes from the neural network. (\cite{dropout14})
+
 \item[Feed-Forward ANN:] Feed-forward ANNs are a class of ANN which have distinct layers of neurons whose signals are only fed forward. This significantly reduces the complexity of neural networks, and means that the neural network is not capable of retaining information.
 
 \item[Hidden Layer:] Hidden layers are layers of perceptrons in an ANN that do not directly deal with input or output, but instead perform highly complex logic through their unique combinations of neural connections (weights) and activation thresholds (biases).
@@ -131,6 +141,8 @@ All of the deep learning models tested were implemented in the Python 3 programm
 \item[Input Layer:] The input layer of an ANN is the layer which doesn't take input from the previous layer, but rather from a sample in a dataset specific to the problem domain the ANN is being trained for.
 
 \item[K-Means:] K-Means is a clustering algorithm, which attempts to find groups/clusters in a dataset with a known amount of classifications by recursively estimating the centre points (centroids) of each cluster.
+
+\item[Learning function:] A learning function is used to transform the output value of neurons to adapt the rate at which they learn.
 
 \item[Machine Learning:] Machine learning is a subfield of computer science that deals with artificial intelligence, pattern recognition and the creation of inference engines.
 
@@ -142,18 +154,25 @@ All of the deep learning models tested were implemented in the Python 3 programm
 
 \item[Overfitting:] If a model is overfitted, it is so fine-tuned to its training dataset that it performs poorly during validation and testing.
 
-\item[Perceptron:] A perceptron is a common artificial model of a neuron which has an activation threshold (bias) associated with it.
+\item[Perceptron:] A perceptron is a common, but outdated, artificial model of a neuron which has a binary output as opposed to a floating-point one. This means that they are harder to train, as a small change in inputs creates a much larger change in output.
 
 \item[Recurrent Neural Network (RNN):] TODO
 
-\item[Regression problem:] A regression problem is a style of problem where a model is trained to find the relationship between input and output data. One example of a regression problem is estimating the selling price of a house given data on it (number of bedrooms, size of the block, etc.)
+\item[Regression problem:] A regression problem is a style of problem where a model is trained to find the relationship between input and output data. One example of a regression problem is estimating the selling price of a house given data on it (number of bedrooms, size of the block, etc.)	
 
-\item[Sigmoid function:] The sigmoid function is a mathematical function that creates an S-shaped curve. Its application to machine learning is as a learning function; it is used to transform the output value of neurons to adapt the rate at which they learn.
+\item[ReLU] ReLUs (Rectified Linear Units) are a simple activation (learning) function that returns linearly unless the input is less than 0, in which case it returns 0.
+
+\item[Sigmoid function:] The sigmoid function is a learning function that creates an S-shaped curve.
 
 \label{itm:SGD}
 \item[Stochastic Gradient Descent (SGD):] A method of minimising the error function of a neural network model (or other machine learning model) given multivariate input, in which the the input parameters are viewed as axes on an n-dimensional graph with the cost function as the Y-axis. SGD attempts to find the global minimum of the cost function without calculating it for every possible combination of parameters by rolling the ball (vector representing the weights and biases of the neural network) down the hill (this analogy only really works with 2 parameters as the X and Z axes and the cost function as the Y axis, but it can be expanded to work with n dimensions.) Local minimums are avoided by the learning rate hyper-parameter, indicative of the length of the step taken (ideally toward the global minimum) in each iteration of the SGD algorithm. The direction gradient toward the local minimum is estimated by calculating the partial derivative of the cost function with respect to each parameter, and determining which parameter, plus-minus the learning rate hyper-parameter, has the lowest result of the cost function.
 
+\item[Softmax:] Softmax is an activation (learning) function that scales all outputs from a layer from 0 to 1, such that the sum of all outputs is 1. It is typically used for the output layer of a classification neural network, as a kind of floating-point one-hot encoding method.
+
 \item[Support Vector Machine (SVM):] SVMs are an older method of machine learning which uses... (TODO)
 \end{description}
+\onecolumn
+
+\printbibliography
 
 \end{document}          
