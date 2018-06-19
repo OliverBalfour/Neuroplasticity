@@ -6,8 +6,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Background Information}{3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Neural Networks}{3}
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{Method}{4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Results}{5}
