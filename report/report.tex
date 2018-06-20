@@ -5,6 +5,8 @@
 \usepackage{caption}
 \usepackage{parskip}
 \usepackage{float}
+\usepackage{graphicx}
+\usepackage[section]{placeins}
 \newfloat{Equation}{H}{lop}
 \usepackage[backend=biber, style=authoryear]{biblatex}
 \addbibresource{./report.bib}
@@ -57,6 +59,13 @@ The techniques used to create neural networks in this experiment, however, are v
 \section{Background Information}
 
 A neural network is essentially a simplified computer abstraction of a brain, with primitive and computationally inexpensive representations of the core functions of neurons in a real life brain. Neural networks are organised into layers, usually at least three, which contain distinct neurons. The first layer takes binary or floating-point input from the host computer program, and the last returns binary output back to the host program. In feed-forward neural networks, the most common type of neural network, simulated signals pass forward through neurons layer by layer without any form of recursion.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{network.png}
+\caption{Diagram of a feed-forward Artificial Neural Network trained to recognise digits.}
+\label{fig:network}
+\end{figure}
 
 A neuron is typically represented by a series of numbers: an activation threshold (bias), and a series of numbers representing the strengths of connections with neurons in the previous layer. Given the outputs (activations) of the neurons in the previous layer (or given the input data from the host program in the case of the input layer), a neuron's output (activation) will equal the sum of all of previous layer's neurons activations multiplied by the connection strengths (weights), with the activation threshold (bias) of the neuron in question being subtracted. In a more traditional perceptron model, the output would be transformed such that if it is positive it is a binary 1, and if it is negative it is a binary 0; however more modern sigmoid models usually transform this value into a floating-point decimal between 0 and 1 using a learning function.
 
@@ -143,7 +152,19 @@ In the above equation, \(P\) is the set of performance metrics for a model or pa
 
 \section{Discussion}
 
+Summarize --- averages, trends, inferences and generalisations
+
+Explain/interpret --- relating the results to relevant research
+
+Experimental error and how to reduce it
+
+Difficulties faced possible improvements for future experimentation
+
 \section{Conclusion}
+
+Respond directly to the aim
+
+This should be a concise statement of WHAT you found out. It should state what your results showed in relation to the Aim and Hypothesis (supported or contradicted-NOT “proved” or “disproved”).The conclusion should not introduce any new ideas that have not already been mentioned elsewhere in your report.
 
 \section{Appendices}
 

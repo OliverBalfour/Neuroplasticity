@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.2.18)  19 JUN 2018 21:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.2.18)  20 JUN 2018 11:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -80,6 +80,29 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box26
 \@float@everytoks=\toks17
 \@floatcapt=\box27
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen118
+\Gin@req@width=\dimen119
+)
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
 )
 \@float@every@Equation=\toks18
 \c@Equation=\count93
@@ -339,18 +362,18 @@ File: english.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -389,6 +412,39 @@ LaTeX Font Info:    ... okay on input line 24.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count282
+\scratchdimen=\dimen120
+\scratchbox=\box28
+\nofMPsegments=\count283
+\nofMParguments=\count284
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count285
+\MPscratchDim=\dimen121
+\MPnumerator=\count286
+\makeMPintoPDFobject=\count287
+\everyMPtoPDFconversion=\toks20
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 Package biblatex Info: No input encoding detected.
 (biblatex)             Assuming 'ascii'.
 Package biblatex Info: Automatic encoding selection.
@@ -397,15 +453,16 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'report.bbl' found.
+
 (./report.bbl)
-Package biblatex Info: Reference section=0 on input line 24.
-Package biblatex Info: Reference segment=0 on input line 24.
+Package biblatex Info: Reference section=0 on input line 26.
+Package biblatex Info: Reference segment=0 on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 25.
+(Font)              <12> on input line 27.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 25.
+(Font)              <8> on input line 27.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 25.
+(Font)              <6> on input line 27.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1]
@@ -420,67 +477,74 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
  [1
 
-] [2] [3]
-Overfull \hbox (34.29254pt too wide) in paragraph at lines 109--109
+] [2]
+<network.png, id=20, 1107.24777pt x 775.99913pt>
+File: network.png Graphic file (type png)
+<use network.png>
+Package pdftex.def Info: network.png  used on input line 65. on input line 65.
+Package pdftex.def Info: Requested size: 375.80544pt x 263.37442pt on input lin
+e 65.
+ [3 <./network.png (PNG copy)>] [4]
+Overfull \hbox (34.29254pt too wide) in paragraph at lines 118--118
 [][]\OT1/cmr/m/n/8 The Breast Can-cer di-ag-no-sis dataset is avail-able at: ht
 tp://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)| 
  []
 
-[4] [5]
-Overfull \hbox (5.05794pt too wide) in paragraph at lines 161--162
+[5] [6]
+Overfull \hbox (5.05794pt too wide) in paragraph at lines 170--171
 []\OT1/cmr/m/n/10 An AGI is
  []
 
 
-Overfull \hbox (1.0939pt too wide) in paragraph at lines 163--164
+Overfull \hbox (1.0939pt too wide) in paragraph at lines 172--173
 []\OT1/cmr/m/n/10 An in-ter-con-
  []
 
 
-Overfull \hbox (6.9562pt too wide) in paragraph at lines 163--164
+Overfull \hbox (6.9562pt too wide) in paragraph at lines 172--173
 \OT1/cmr/m/n/10 net-work to-ward the out-put layer of neu-rons which
  []
 
 
-Overfull \hbox (1.29732pt too wide) in paragraph at lines 165--166
+Overfull \hbox (1.29732pt too wide) in paragraph at lines 174--175
 []\OT1/cmr/m/n/10 A clas-si-fi-ca-tion prob-lem is
  []
 
 
-Overfull \hbox (0.62039pt too wide) in paragraph at lines 167--168
+Overfull \hbox (0.62039pt too wide) in paragraph at lines 176--177
 []\OT1/cmr/m/n/10 A neu-
  []
 
 
-Overfull \hbox (8.01796pt too wide) in paragraph at lines 173--174
+Overfull \hbox (8.01796pt too wide) in paragraph at lines 182--183
 []\OT1/cmr/m/n/10 Feed-forward ANNs are a class
  []
 
 
-Overfull \hbox (3.37291pt too wide) in paragraph at lines 177--178
+Overfull \hbox (3.37291pt too wide) in paragraph at lines 186--187
 \OT1/cmr/m/n/10 which doesn't take in-put from the pre-vi-ous layer,
  []
 
 
-Overfull \hbox (0.70615pt too wide) in paragraph at lines 193--194
+Overfull \hbox (0.70615pt too wide) in paragraph at lines 202--203
 \OT1/cmr/m/n/10 as a small change in in-puts cre-ates a much larger
- []
-
-[6
-
-]
-Overfull \hbox (6.43633pt too wide) in paragraph at lines 197--198
-[]\OT1/cmr/m/n/10 A re-gres-sion prob-lem is a style
- []
-
-
-Overfull \hbox (1.1163pt too wide) in paragraph at lines 204--205
-[]\OT1/cmr/m/n/10 A method
  []
 
 [7
 
-] [8
+]
+Overfull \hbox (6.43633pt too wide) in paragraph at lines 206--207
+[]\OT1/cmr/m/n/10 A re-gres-sion prob-lem is a style
+ []
+
+
+Overfull \hbox (1.1163pt too wide) in paragraph at lines 213--214
+[]\OT1/cmr/m/n/10 A method
+ []
+
+[8
+
+] [9
 
 
 ] (./report.aux)
@@ -489,10 +553,10 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 8738 strings out of 494813
- 154701 string characters out of 6178109
- 577203 words of memory out of 5000000
- 12016 multiletter control sequences out of 15000+600000
+ 9543 strings out of 494813
+ 166200 string characters out of 6178109
+ 589867 words of memory out of 5000000
+ 12781 multiletter control sequences out of 15000+600000
  9316 words of font info for 33 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  45i,8n,46p,1210b,1140s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -512,10 +576,10 @@ hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (10 pages, 217652 bytes).
+Output written on report.pdf (11 pages, 380483 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 109 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
