@@ -27,7 +27,7 @@
 \maketitle
 
 \begin{abstract}
-	In this experiment the neuroplasticity of neural networks, both artificial and biological, was tested. Several configurations of computing machines, ranging from simple feed-forward Artificial Neural Networks (ANNs) to more complex Recurrent Neural Networks (RNNs) and Convolutional Neural Networks (CNNs), were tested, with the human brain as a baseline for performance. Also tested was a Support Vector Machine (SVM), a much older algorithm with a mathematical and not biologically-inspired approach to classification, to gauge how far the field of Machine Learning has come in the past decades both in terms of performance and neuroplasticity. Each machine was tested (with minor alterations to the input and output layers of each artificial model to account for differing input sizes) against several different classification and regression problems including but not limited to classifying handwritten digits (using the MNIST dataset) and performing sentiment analysis on highly polarized movie reviews (using the SAR14 IMDb review dataset). The neuroplasticity of each model was then evaluated based on the standard deviation of the error rates of each model in each of the problems tested.
+	In this experiment the neuroplasticity of neural networks, both artificial and biological, was tested. Several configurations of computing machines, ranging from simple dense feed-forward Multi-Layer Perceptrons (MLPs) and Artificial Neural Networks (ANNs) to more complex Recurrent Neural Networks (RNNs), were tested, with the human brain as a baseline for performance. Also tested was a Support Vector Machine (SVM), a much older algorithm with a mathematical and not biologically-inspired approach to classification, to gauge how far the field of Machine Learning has come in the past decades both in terms of performance and neuroplasticity. Each machine was tested (with minor programmatic alterations to the input and output layers of each artificial model to account for differing input sizes) against several different classification and regression problems including but not limited to classifying handwritten digits (using the MNIST dataset) and performing sentiment analysis on highly polarized movie reviews (using the SAR14 IMDb review dataset). The neuroplasticity of each model was then evaluated based on the standard deviation of the error rates of each model in each of the problems tested.
 \end{abstract}
 
 \tableofcontents
@@ -42,7 +42,6 @@ The aim of this experiment is to determine how far behind in terms of neuroplast
 It is hypothesised that:
 \begin{enumerate}
 	\item The human brain will marginally surpass state-of-the-art ANN configurations in all problem domains, and will perform exceptionally well in all problem domains. (Refer to the method on page \pageref{itm:Method} for a full list of problems tested.)
-	\item The Convolutional Neural Network (CNN) will excel at digit recognition but not at classifying iris genuses or performing sentiment analysis.
 	\item The Recurrent Neural Network (RNN) will perform well on all problems, but particularly the sentiment analysis problem.
 	\item The standard densely-layered feed-forward Artificial Neural Network (ANN) will perform acceptably on all problems.
 	\item The Support Vector Machine (SVM) will perform well recognising handwritten digits and classifying iris genuses, but will perform sub-par in all other problem domains.
@@ -97,28 +96,37 @@ Nodes in neural networks are quite similar to their biological counterparts, in 
 \label{itm:Method}
 \section{Method}
 
-There are 7 artificial neural networks tested in this experiment, against 4 different classification and regression problems, each in different problem domains. The neural network configurations are listed below:
+There are 6 neural networks tested in this experiment, against 4 different classification and regression problems, each in different problem domains. The neural network configurations are listed below:
 
 \begin{enumerate}
 	\item A Support Vector Machine (SVM), to show the inefficiency of traditional mathematical or logical approaches compared to biologically inspired.
-	\item A densely-layered feed-forward Artificial Neural Network (ANN) using perceptrons instead of sigmoid neurons.
-	\item A standard densely-layered feed-forward ANN, with 1 hidden layer.
-	\item A standard ANN like above, but with 2 hidden layers.
-	\item A Recurrent Neural Network (RNN), with 1 hidden layer.
-	\item A RNN with 2 hidden layers.
+	\item 8 different densely-layered feed-forward Multi-Layer Perceptrons (MLPs) using perceptrons instead of sigmoid neurons (2 sets of 4 different models with differing hidden layer configurations, one set with dropout and one without).
+	\newline
+	The 4 hidden layer configurations are:
+	\begin{enumerate}
+		\item 1 hidden layer with 32 neurons
+		\item 1 hidden layer with 256 neurons
+		\item 2 hidden layers with 256 neurons each
+		\item 2 hidden layers with 512 neurons each
+	\end{enumerate}
+	All dropout-enabled models have the dropout percentage set to 20\% (so 20\% of neurons are randomly discarded throughout the learning process.)
+	\item 8 standard densely-layered feed-forward sigmoid Artificial Neural Networks (ANNs), with hidden layer configurations identical to those of the MLPs above, aside from the nonbinary activation function.
+	\item 4 Recurrent Neural Networks (RNNs), with 1 Long Short-Term Memory (LSTM) hidden layer containing 32 or 128 neurons. Two models have dropout, the others do not.
 	\item And as a baseline for performance and neuroplasticity, several people are used.
 \end{enumerate}
+
+It was decided that Convolutional Neural Networks (CNNs) should not be included in the experiment, as although they are a very popular type of neural network, they only work with multidimensional spatial or temporal data (their primary use-cases are in computer vision, optical character recognition, and audio analysis.) This means that they cannot feasibly compute linear regression or non-temporal classification functions without having their kernel layers configured to apply no transformation to the data (by having nil values for all cells except the centre, which would have a 1, such that each kernel operation merely acts as a cat operation.)
 
 Each of the above models will be tested against the following classification and regression problems:
 
 \begin{enumerate}
 	\item Handwritten digit recognition (using the MNIST dataset)\footnote{The MNIST dataset is available at: http://yann.lecun.com/exdb/mnist/}
-	\item Iris flower classification (using Fisher's dataset\footnote{The Iris dataset is available at: http://archive.ics.uci.edu/ml/datasets/Iris})
+	\item Iris flower classification (using Fisher's dataset\footnote{The Iris dataset is available at: http://archive.ics.uci.edu/ml/datasets/Iris} (\cite{uciml2007}))
 	\item Sentiment analysis (using the SAR14 dataset of IMDb movie reviews)
 	\item Breast cancer diagnosis (using the University of Wisconsin dataset\footnote{The Breast Cancer diagnosis dataset is available at: http://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)})
 \end{enumerate}
 
-The human brain will also be tested against each of the aforementioned problems, although due to the varying nature and medium in which the datasets above are presented in, which means different cortices of the human brain will be used for different problem domains, the human test subjects will have a not insignificant advantage over their machine counterparts.
+The human brain will be tested against each of the aforementioned problems, although due to the varying nature and medium in which the datasets above are presented in, which means different cortices of the human brain will be used for different problem domains, the human test subjects will have a not insignificant advantage over their machine counterparts.
 
 To avoid allowing the human test subjects to utilise areas of their brains which have already been trained in the problem domains this experiment is testing (for example, letting a native English speaker perform the sentiment analysis problem on polarised English movie reviews), all of the textual samples have been machine-translated (using Google Translate) into TODO, a lanuage with a different semantic structure, which does not share any major linguistic roots, and which is reliably machine-translated. Additionally, in the digit recognition problem, all images of handwritten digits are transformed/permuted using a randomly generated feature-extraction algorithm so as to be different enough from their source images as to be indiscernable by an untrained eye previously aquainted with Arabic digits.
 
@@ -148,7 +156,9 @@ In the above equation, \(P\) is the set of performance metrics for a model or pa
 
 \section{Results}
 
+According to \cite{simard1993efficient}, the average human error against the MNIST digit recognition problem is about 1.5\%.
 
+TODO
 
 \section{Discussion}
 
@@ -160,11 +170,21 @@ Experimental error and how to reduce it
 
 Difficulties faced possible improvements for future experimentation
 
+TODO
+
+RNNs didn't have time to converge (20min/epoch with 9x downscaled MNIST images), ANNs were so fast they diverged in under a minute (3.630s/epoch). This is due to both the computational complexity of evaluating the data flow of an RNN, and as there were hundreds of thousands of trainable parameters subject to the stochastic gradient descent algorithm.
+
+The world record for accuracy at classifying the MNIST handwritten digit dataset was almost broken; if this experiment had been conducted a year earlier it would have surpassed the world record by 0.21\% accuracy. However, late last year, ...
+
+Sentiment analysis didn't converge...
+
 \section{Conclusion}
 
 Respond directly to the aim
 
 This should be a concise statement of WHAT you found out. It should state what your results showed in relation to the Aim and Hypothesis (supported or contradicted-NOT “proved” or “disproved”).The conclusion should not introduce any new ideas that have not already been mentioned elsewhere in your report.
+
+TODO
 
 \section{Appendices}
 

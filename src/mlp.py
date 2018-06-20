@@ -10,11 +10,11 @@ def run (dataset, layers, dropout):
 	(x_train, y_train), (x_test, y_test), dim, num_classes, max_features = dataset
 
 	model = Sequential()
-	model.add(Dense(layers[0], activation='sigmoid', input_dim=dim))
+	model.add(Dense(layers[0], activation='relu', input_dim=dim))
 	if dropout:
 		model.add(Dropout(0.2))
 	for i in range(1, len(layers)):
-		model.add(Dense(layers[i], activation='sigmoid'))
+		model.add(Dense(layers[i], activation='relu'))
 		if dropout:
 			model.add(Dropout(0.2))
 	model.add(Dense(num_classes, activation='softmax'))

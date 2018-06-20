@@ -19,6 +19,33 @@
 
 \refsection{0}
   \sortlist[entry]{nyt/global/}
+    \entry{uciml2007}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=f037b5a22ba64705ce71f501ea1d4476}{%
+           family={A.\bibnamedelimi Asuncion},
+           familyi={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={D.J.\bibnamedelimi Newman},
+           giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {University of California, Irvine, School of Information}%
+        {Computer Sciences}%
+      }
+      \strng{namehash}{f037b5a22ba64705ce71f501ea1d4476}
+      \strng{fullhash}{f037b5a22ba64705ce71f501ea1d4476}
+      \strng{authornamehash}{f037b5a22ba64705ce71f501ea1d4476}
+      \strng{authorfullhash}{f037b5a22ba64705ce71f501ea1d4476}
+      \field{sortinit}{A}
+      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{UCI Machine Learning Repository}
+      \field{year}{2007}
+      \verb{url}
+      \verb http://archive.ics.uci.edu/ml/index.php
+      \endverb
+    \endentry
     \entry{bennett1964chemical}{article}{}
       \name{author}{4}{}{%
         {{uniquename=0,hash=e134538e7f28a38a531060045a61c2f0}{%
@@ -281,6 +308,39 @@
       \field{year}{1986}
       \field{pages}{533}
       \range{pages}{1}
+    \endentry
+    \entry{simard1993efficient}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=c866c0bcd8215f257f24444a7f53932f}{%
+           family={Simard},
+           familyi={S\bibinitperiod},
+           given={Patrice},
+           giveni={P\bibinitperiod}}}%
+        {{uniquename=0,hash=6a1aa6b7eab12b931ca7c7e3f927231d}{%
+           family={LeCun},
+           familyi={L\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod}}}%
+        {{uniquename=0,hash=4f138434f743ff4d54b0b36a04662329}{%
+           family={Denker},
+           familyi={D\bibinitperiod},
+           given={John\bibnamedelima S},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{0b1c6aba375e6e1d84ffadaba9a05c6a}
+      \strng{fullhash}{0b1c6aba375e6e1d84ffadaba9a05c6a}
+      \strng{authornamehash}{0b1c6aba375e6e1d84ffadaba9a05c6a}
+      \strng{authorfullhash}{0b1c6aba375e6e1d84ffadaba9a05c6a}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in neural information processing systems}
+      \field{title}{Efficient pattern recognition using a new transformation distance}
+      \field{year}{1993}
+      \field{pages}{50\bibrangedash 58}
+      \range{pages}{9}
     \endentry
     \entry{dropout14}{article}{}
       \name{author}{5}{}{%
