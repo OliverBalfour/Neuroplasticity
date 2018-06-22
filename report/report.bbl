@@ -89,6 +89,42 @@
       \field{pages}{610\bibrangedash 619}
       \range{pages}{10}
     \endentry
+    \entry{ciregan2012multi}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=dd1f854d82b8609d3bad746e2f2e93da}{%
+           family={Ciregan},
+           familyi={C\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+        {{uniquename=0,hash=be71dea014b345d130231579ad7a5115}{%
+           family={Meier},
+           familyi={M\bibinitperiod},
+           given={Ueli},
+           giveni={U\bibinitperiod}}}%
+        {{uniquename=0,hash=288bdbcfe1b91ad7484d7a24f74f99ed}{%
+           family={Schmidhuber},
+           familyi={S\bibinitperiod},
+           given={J\"{u}rgen},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{8fe7912e702ac09efe5e14ecd70624f3}
+      \strng{fullhash}{8fe7912e702ac09efe5e14ecd70624f3}
+      \strng{authornamehash}{8fe7912e702ac09efe5e14ecd70624f3}
+      \strng{authorfullhash}{8fe7912e702ac09efe5e14ecd70624f3}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Computer vision and pattern recognition (CVPR), 2012 IEEE conference on}
+      \field{title}{Multi-column deep neural networks for image classification}
+      \field{year}{2012}
+      \field{pages}{3642\bibrangedash 3649}
+      \range{pages}{8}
+    \endentry
     \entry{vapnik1995support}{article}{}
       \name{author}{2}{}{%
         {{uniquename=0,hash=17acda211a651e90e228f1776ee07818}{%
@@ -216,6 +252,127 @@
       \field{title}{When will AI exceed human performance? Evidence from AI experts}
       \field{year}{2017}
     \endentry
+    \entry{herculano2009human}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=844747f22b37db160509d1c43124abcb}{%
+           family={Herculano-Houzel},
+           familyi={H\bibinithyphendelim H\bibinitperiod},
+           given={Suzana},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Frontiers}%
+      }
+      \strng{namehash}{844747f22b37db160509d1c43124abcb}
+      \strng{fullhash}{844747f22b37db160509d1c43124abcb}
+      \strng{authornamehash}{844747f22b37db160509d1c43124abcb}
+      \strng{authorfullhash}{844747f22b37db160509d1c43124abcb}
+      \field{sortinit}{H}
+      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in human neuroscience}
+      \field{title}{The human brain in numbers: a linearly scaled-up primate brain}
+      \field{volume}{3}
+      \field{year}{2009}
+      \field{pages}{31}
+      \range{pages}{1}
+    \endentry
+    \entry{hinton2012neural}{misc}{}
+      \name{author}{3}{}{%
+        {{uniquename=1,hash=9a8750ccdb2a4cf14d2655face1ce016}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey},
+           giveni={G\bibinitperiod}}}%
+        {{uniquename=0,hash=6a147afa4569ce6cf23c0436e65d8486}{%
+           family={Srivastava},
+           familyi={S\bibinitperiod},
+           given={Nitish},
+           giveni={N\bibinitperiod}}}%
+        {{uniquename=0,hash=fe49ec9b6f902b79d166c1f25405c088}{%
+           family={Swersky},
+           familyi={S\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Toronto, School of Computer Science}%
+      }
+      \strng{namehash}{0060e06921fabe3982f44a9710355326}
+      \strng{fullhash}{0060e06921fabe3982f44a9710355326}
+      \strng{authornamehash}{0060e06921fabe3982f44a9710355326}
+      \strng{authorfullhash}{0060e06921fabe3982f44a9710355326}
+      \field{sortinit}{H}
+      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{RMSprop: Divide the gradient by a running average of its recent magnitude}
+      \field{year}{2012}
+      \verb{url}
+      \verb https://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf
+      \endverb
+    \endentry
+    \entry{maas2011imdb}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,hash=ab40d942e6d55c8c8c2e92e5ada835a4}{%
+           family={Maas},
+           familyi={M\bibinitperiod},
+           given={Andrew\bibnamedelima L.},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{uniquename=0,hash=36f37f294113dfb89833f11743a6d719}{%
+           family={Daly},
+           familyi={D\bibinitperiod},
+           given={Raymond\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{uniquename=0,hash=ad039874c93a19bb04382c9fb00a0dda}{%
+           family={Pham},
+           familyi={P\bibinitperiod},
+           given={Peter\bibnamedelima T.},
+           giveni={P\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{uniquename=0,hash=723f50cb8399170cf7a83a00b73da4f8}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+        {{uniquename=0,hash=66b1ab24d7f42d468388f6200a7b5967}{%
+           family={Ng},
+           familyi={N\bibinitperiod},
+           given={Andrew\bibnamedelima Y.},
+           giveni={A\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{uniquename=0,hash=699d626ef41a1a827d623529c1a45e5a}{%
+           family={Potts},
+           familyi={P\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Portland, Oregon, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{4eb7115e86dafcc01475a50db83cd38a}
+      \strng{fullhash}{2cf93cd94a5cb0b3cd5841e6bcfea8e2}
+      \strng{authornamehash}{4eb7115e86dafcc01475a50db83cd38a}
+      \strng{authorfullhash}{2cf93cd94a5cb0b3cd5841e6bcfea8e2}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies}
+      \field{month}{5}
+      \field{title}{Learning Word Vectors for Sentiment Analysis}
+      \field{year}{2011}
+      \field{pages}{142\bibrangedash 150}
+      \range{pages}{9}
+      \verb{url}
+      \verb http://www.aclweb.org/anthology/P11-1015
+      \endverb
+    \endentry
     \entry{perwej12}{article}{}
       \name{author}{2}{}{%
         {{uniquename=0,hash=c4e893f95da7cb94bc4bc74acb0ada7f}{%
@@ -278,7 +435,7 @@
            familyi={R\bibinitperiod},
            given={David\bibnamedelima E},
            giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{uniquename=0,hash=5aeb1de9b6c6f00a078230c628e6f41c}{%
+        {{uniquename=1,hash=5aeb1de9b6c6f00a078230c628e6f41c}{%
            family={Hinton},
            familyi={H\bibinitperiod},
            given={Geoffrey\bibnamedelima E},
@@ -386,6 +543,27 @@
       \field{dateera}{ce}
       \verb{url}
       \verb https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf
+      \endverb
+    \endentry
+    \entry{wormwiring2012}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=19b6a7f3d33d0cb780d5d56751f9b735}{%
+           family={WormWiring},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{19b6a7f3d33d0cb780d5d56751f9b735}
+      \strng{fullhash}{19b6a7f3d33d0cb780d5d56751f9b735}
+      \strng{authornamehash}{19b6a7f3d33d0cb780d5d56751f9b735}
+      \strng{authorfullhash}{19b6a7f3d33d0cb780d5d56751f9b735}
+      \field{sortinit}{W}
+      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The C.Elegans Wiring Project}
+      \field{year}{2012}
+      \verb{url}
+      \verb http://wormwiring.org/
       \endverb
     \endentry
   \endsortlist

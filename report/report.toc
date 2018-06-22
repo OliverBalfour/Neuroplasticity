@@ -10,12 +10,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Results}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Discussion}{6}
+\contentsline {section}{Discussion}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Conclusion}{6}
+\contentsline {section}{Conclusion}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Appendices}{7}
+\contentsline {section}{Appendices}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Appendix I: Implementation Details}{7}
+\contentsline {subsection}{Appendix I: Implementation Details}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Glossary}{8}
+\contentsline {subsection}{Glossary}{11}

@@ -18,7 +18,7 @@ def run (dataset, layers, dropout):
 	# and only use 2 epochs (RNN training on MNIST is reaaally slow...)
 	if dim == 784:
 		model.add(MaxPooling1D(pool_size=3, padding='valid'))
-		epochs = 2
+		epochs = 1
 
 	for i in range(len(layers)):
 		model.add(LSTM(layers[i], dropout=dropout, recurrent_dropout=dropout))
@@ -35,7 +35,7 @@ def run (dataset, layers, dropout):
 	model.fit(
 		x_train, y_train,
 		batch_size=batch_size,
-		epochs=8,
+		epochs=epochs,
 		validation_data=(x_test, y_test)
 	)
 	score = model.evaluate(
