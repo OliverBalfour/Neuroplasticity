@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.2.18)  22 JUN 2018 21:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.2.18)  7 AUG 2018 20:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -490,48 +490,48 @@ Package pdftex.def Info: network.png  used on input line 65. on input line 65.
 Package pdftex.def Info: Requested size: 375.80544pt x 263.37442pt on input lin
 e 65.
  [3 <./network.png (PNG copy)>] [4]
-Overfull \hbox (34.29254pt too wide) in paragraph at lines 129--129
-[][]\OT1/cmr/m/n/8 The Breast Can-cer di-ag-no-sis dataset is avail-able at: ht
+Overfull \hbox (30.63693pt too wide) in paragraph at lines 131--131
+[][]\OT1/cmr/m/n/8 The breast can-cer di-ag-no-sis dataset is avail-able at: ht
 tp://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)| 
  []
 
 [5]
-<chart.png, id=41, 911.405pt x 546.04pt>
+<chart.png, id=42, 911.405pt x 546.04pt>
 File: chart.png Graphic file (type png)
 <use chart.png>
 Package pdftex.def Info: chart.png  used on input line 166. on input line 166.
 Package pdftex.def Info: Requested size: 469.75502pt x 281.44287pt on input lin
 e 166.
  [6]
-<chart1.png, id=45, 912.40875pt x 546.04pt>
+<chart1.png, id=46, 912.40875pt x 546.04pt>
 File: chart1.png Graphic file (type png)
 <use chart1.png>
 Package pdftex.def Info: chart1.png  used on input line 172. on input line 172.
 
 Package pdftex.def Info: Requested size: 469.75502pt x 281.12625pt on input lin
 e 172.
-<chart2.png, id=46, 459.7175pt x 359.3425pt>
+<chart2.png, id=47, 459.7175pt x 359.3425pt>
 File: chart2.png Graphic file (type png)
 <use chart2.png>
 Package pdftex.def Info: chart2.png  used on input line 179. on input line 179.
 
 Package pdftex.def Info: Requested size: 211.38832pt x 165.23375pt on input lin
 e 179.
-<chart3.png, id=47, 461.725pt x 361.35pt>
+<chart3.png, id=48, 461.725pt x 361.35pt>
 File: chart3.png Graphic file (type png)
 <use chart3.png>
 Package pdftex.def Info: chart3.png  used on input line 183. on input line 183.
 
 Package pdftex.def Info: Requested size: 211.38832pt x 165.43456pt on input lin
 e 183.
-<chart4.png, id=48, 459.7175pt x 360.34625pt>
+<chart4.png, id=49, 459.7175pt x 360.34625pt>
 File: chart4.png Graphic file (type png)
 <use chart4.png>
 Package pdftex.def Info: chart4.png  used on input line 187. on input line 187.
 
 Package pdftex.def Info: Requested size: 211.38832pt x 165.6953pt on input line
  187.
-<chart5.png, id=49, 458.71375pt x 360.34625pt>
+<chart5.png, id=50, 458.71375pt x 360.34625pt>
 File: chart5.png Graphic file (type png)
 <use chart5.png>
 Package pdftex.def Info: chart5.png  used on input line 191. on input line 191.
@@ -541,69 +541,54 @@ Package pdftex.def Info: Requested size: 211.38832pt x 166.0582pt on input line
  [7 <./chart.png (PNG copy)> <./chart1.png (PNG copy)>] [8 <./chart2.png (PNG c
 opy)> <./chart3.png (PNG copy)> <./chart4.png (PNG copy)> <./chart5.png (PNG co
 py)>] [9] [10]
-Overfull \hbox (5.05794pt too wide) in paragraph at lines 230--231
-[]\OT1/cmr/m/n/10 An AGI is
- []
-
-
-Overfull \hbox (1.0939pt too wide) in paragraph at lines 232--233
+Overfull \hbox (1.0939pt too wide) in paragraph at lines 243--244
 []\OT1/cmr/m/n/10 An in-ter-con-
  []
 
 
-Overfull \hbox (6.9562pt too wide) in paragraph at lines 232--233
+Overfull \hbox (6.9562pt too wide) in paragraph at lines 243--244
 \OT1/cmr/m/n/10 net-work to-ward the out-put layer of neu-rons which
  []
 
 
-Overfull \hbox (1.29732pt too wide) in paragraph at lines 234--235
-[]\OT1/cmr/m/n/10 A clas-si-fi-ca-tion prob-lem is
- []
-
-
-Overfull \hbox (0.62039pt too wide) in paragraph at lines 236--237
+Overfull \hbox (0.62039pt too wide) in paragraph at lines 247--248
 []\OT1/cmr/m/n/10 A neu-
  []
 
 
-Overfull \hbox (8.01796pt too wide) in paragraph at lines 242--243
-[]\OT1/cmr/m/n/10 Feed-forward ANNs are a class
+Overfull \hbox (3.28958pt too wide) in paragraph at lines 251--252
+\OT1/cmr/m/n/10 cent-age (con-fig-urable as a hyper-parameter, 20%
  []
 
 
-Overfull \hbox (3.37291pt too wide) in paragraph at lines 248--249
-\OT1/cmr/m/n/10 which doesn't take in-put from the pre-vi-ous layer,
+Overfull \hbox (4.14214pt too wide) in paragraph at lines 255--256
+[]\OT1/cmr/m/n/10 A layer of ar-ti-fi-cial neu-rons that does
  []
 
 
-Overfull \hbox (11.37238pt too wide) in paragraph at lines 254--255
-[]\OT1/cmr/m/n/10 The learn-ing rate is a hyper-parameter
+Overfull \hbox (4.51184pt too wide) in paragraph at lines 255--256
+\OT1/cmr/m/n/10 stead per-forms highly com-plex logic de-rived from
  []
 
 
-Overfull \hbox (6.59512pt too wide) in paragraph at lines 254--255
-\OT1/cmr/m/n/10 per-mu-ta-tions made dur-ing the pro-cess of stochas-
- []
-
-
-Overfull \hbox (4.03831pt too wide) in paragraph at lines 256--257
-[]\OT1/cmr/m/n/10 LSTMs are
+Overfull \hbox (7.76176pt too wide) in paragraph at lines 267--268
+\OT1/cmr/m/n/10 that deals with teach-ing ma-chines to learn, specif-
  []
 
 [11
 
 ]
-Overfull \hbox (0.70615pt too wide) in paragraph at lines 268--269
+Overfull \hbox (0.70615pt too wide) in paragraph at lines 277--278
 \OT1/cmr/m/n/10 as a small change in in-puts cre-ates a much larger
  []
 
 
-Overfull \hbox (6.43633pt too wide) in paragraph at lines 272--273
+Overfull \hbox (6.43633pt too wide) in paragraph at lines 281--282
 []\OT1/cmr/m/n/10 A re-gres-sion prob-lem is a style
  []
 
 
-Overfull \hbox (1.1163pt too wide) in paragraph at lines 281--282
+Overfull \hbox (1.1163pt too wide) in paragraph at lines 290--291
 []\OT1/cmr/m/n/10 A method
  []
 
@@ -611,7 +596,7 @@ Missing character: There is no ã in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no € in font cmr10!
 
-Overfull \hbox (17.43427pt too wide) in paragraph at lines 285--286
+Overfull \hbox (17.43427pt too wide) in paragraph at lines 294--295
 []\OT1/cmr/m/n/10 SVMs are anolder
  []
 
@@ -624,13 +609,13 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 9664 strings out of 494813
- 168369 string characters out of 6178109
- 591235 words of memory out of 5000000
- 12894 multiletter control sequences out of 15000+600000
+ 9666 strings out of 494813
+ 168396 string characters out of 6178109
+ 592257 words of memory out of 5000000
+ 12896 multiletter control sequences out of 15000+600000
  9316 words of font info for 33 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 45i,8n,46p,1247b,1139s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,8n,46p,1662b,1139s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
@@ -644,13 +629,14 @@ nts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (15 pages, 502214 bytes).
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on report.pdf (15 pages, 513350 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
+ 132 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
