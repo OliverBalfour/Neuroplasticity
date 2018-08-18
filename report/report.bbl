@@ -373,6 +373,47 @@
       \verb http://www.aclweb.org/anthology/P11-1015
       \endverb
     \endentry
+    \entry{mangasarian1995breast}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=c7f5e9031e5db46c947134de80443a53}{%
+           family={Mangasarian},
+           familyi={M\bibinitperiod},
+           given={Olvi\bibnamedelima L},
+           giveni={O\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{uniquename=0,hash=41e1ff3f6e34c2bec5f2bbb8b3e4881c}{%
+           family={Street},
+           familyi={S\bibinitperiod},
+           given={W\bibnamedelima Nick},
+           giveni={W\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{uniquename=0,hash=0171163fdd17d2bb9b899d255be8f1f8}{%
+           family={Wolberg},
+           familyi={W\bibinitperiod},
+           given={William\bibnamedelima H},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {INFORMS}%
+      }
+      \strng{namehash}{6077a0a455237221f3adc6cd609f918b}
+      \strng{fullhash}{6077a0a455237221f3adc6cd609f918b}
+      \strng{authornamehash}{6077a0a455237221f3adc6cd609f918b}
+      \strng{authorfullhash}{6077a0a455237221f3adc6cd609f918b}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Operations Research}
+      \field{number}{4}
+      \field{title}{Breast cancer diagnosis and prognosis via linear programming}
+      \field{volume}{43}
+      \field{year}{1995}
+      \field{pages}{570\bibrangedash 577}
+      \range{pages}{8}
+      \verb{url}
+      \verb ftp://ftp.cs.wisc.edu/math-prog/tech-reports/94-10.pdf
+      \endverb
+    \endentry
     \entry{perwej12}{article}{}
       \name{author}{2}{}{%
         {{uniquename=0,hash=c4e893f95da7cb94bc4bc74acb0ada7f}{%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.2.18)  7 AUG 2018 20:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.2.18)  18 AUG 2018 20:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -367,18 +367,18 @@ File: english.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -460,14 +460,14 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'report.bbl' found.
 
 (./report.bbl)
-Package biblatex Info: Reference section=0 on input line 27.
-Package biblatex Info: Reference segment=0 on input line 27.
+Package biblatex Info: Reference section=0 on input line 30.
+Package biblatex Info: Reference segment=0 on input line 30.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 28.
+(Font)              <12> on input line 31.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 28.
+(Font)              <8> on input line 31.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 28.
+(Font)              <6> on input line 31.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1]
@@ -486,121 +486,146 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <network.png, id=20, 1107.24777pt x 775.99913pt>
 File: network.png Graphic file (type png)
 <use network.png>
-Package pdftex.def Info: network.png  used on input line 65. on input line 65.
+Package pdftex.def Info: network.png  used on input line 67. on input line 67.
 Package pdftex.def Info: Requested size: 375.80544pt x 263.37442pt on input lin
-e 65.
+e 67.
  [3 <./network.png (PNG copy)>] [4]
-Overfull \hbox (30.63693pt too wide) in paragraph at lines 131--131
-[][]\OT1/cmr/m/n/8 The breast can-cer di-ag-no-sis dataset is avail-able at: ht
-tp://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)| 
+Overfull \hbox (50.1358pt too wide) in paragraph at lines 130--130
+[][]\OT1/cmr/m/n/8 The breast can-cer di-ag-no-sis dataset is avail-able at: \O
+T1/cmtt/m/n/8 http://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(D
+iagnostic)| 
  []
 
 [5]
-<chart.png, id=42, 911.405pt x 546.04pt>
+<chart.png, id=43, 911.405pt x 546.04pt>
 File: chart.png Graphic file (type png)
 <use chart.png>
-Package pdftex.def Info: chart.png  used on input line 166. on input line 166.
+Package pdftex.def Info: chart.png  used on input line 158. on input line 158.
 Package pdftex.def Info: Requested size: 469.75502pt x 281.44287pt on input lin
-e 166.
- [6]
-<chart1.png, id=46, 912.40875pt x 546.04pt>
+e 158.
+<chart1.png, id=44, 912.40875pt x 546.04pt>
 File: chart1.png Graphic file (type png)
 <use chart1.png>
-Package pdftex.def Info: chart1.png  used on input line 172. on input line 172.
+Package pdftex.def Info: chart1.png  used on input line 164. on input line 164.
 
 Package pdftex.def Info: Requested size: 469.75502pt x 281.12625pt on input lin
-e 172.
-<chart2.png, id=47, 459.7175pt x 359.3425pt>
+e 164.
+ [6 <./chart.png (PNG copy)>]
+<chart2.png, id=48, 459.7175pt x 359.3425pt>
 File: chart2.png Graphic file (type png)
 <use chart2.png>
-Package pdftex.def Info: chart2.png  used on input line 179. on input line 179.
+Package pdftex.def Info: chart2.png  used on input line 171. on input line 171.
 
 Package pdftex.def Info: Requested size: 211.38832pt x 165.23375pt on input lin
-e 179.
-<chart3.png, id=48, 461.725pt x 361.35pt>
+e 171.
+<chart3.png, id=49, 461.725pt x 361.35pt>
 File: chart3.png Graphic file (type png)
 <use chart3.png>
-Package pdftex.def Info: chart3.png  used on input line 183. on input line 183.
+Package pdftex.def Info: chart3.png  used on input line 175. on input line 175.
 
 Package pdftex.def Info: Requested size: 211.38832pt x 165.43456pt on input lin
-e 183.
-<chart4.png, id=49, 459.7175pt x 360.34625pt>
+e 175.
+<chart4.png, id=50, 459.7175pt x 360.34625pt>
 File: chart4.png Graphic file (type png)
 <use chart4.png>
-Package pdftex.def Info: chart4.png  used on input line 187. on input line 187.
+Package pdftex.def Info: chart4.png  used on input line 179. on input line 179.
 
 Package pdftex.def Info: Requested size: 211.38832pt x 165.6953pt on input line
- 187.
-<chart5.png, id=50, 458.71375pt x 360.34625pt>
+ 179.
+<chart5.png, id=51, 458.71375pt x 360.34625pt>
 File: chart5.png Graphic file (type png)
 <use chart5.png>
-Package pdftex.def Info: chart5.png  used on input line 191. on input line 191.
+Package pdftex.def Info: chart5.png  used on input line 183. on input line 183.
 
 Package pdftex.def Info: Requested size: 211.38832pt x 166.0582pt on input line
- 191.
- [7 <./chart.png (PNG copy)> <./chart1.png (PNG copy)>] [8 <./chart2.png (PNG c
-opy)> <./chart3.png (PNG copy)> <./chart4.png (PNG copy)> <./chart5.png (PNG co
-py)>] [9] [10]
-Overfull \hbox (1.0939pt too wide) in paragraph at lines 243--244
+ 183.
+ [7 <./chart1.png (PNG copy)> <./chart2.png (PNG copy)> <./chart3.png (PNG copy
+)> <./chart4.png (PNG copy)> <./chart5.png (PNG copy)>] [8] [9]
+Overfull \hbox (1.0939pt too wide) in paragraph at lines 235--236
 []\OT1/cmr/m/n/10 An in-ter-con-
  []
 
 
-Overfull \hbox (6.9562pt too wide) in paragraph at lines 243--244
+Overfull \hbox (6.9562pt too wide) in paragraph at lines 235--236
 \OT1/cmr/m/n/10 net-work to-ward the out-put layer of neu-rons which
  []
 
 
-Overfull \hbox (0.62039pt too wide) in paragraph at lines 247--248
+Overfull \hbox (0.62039pt too wide) in paragraph at lines 239--240
 []\OT1/cmr/m/n/10 A neu-
  []
 
 
-Overfull \hbox (3.28958pt too wide) in paragraph at lines 251--252
+Overfull \hbox (3.28958pt too wide) in paragraph at lines 243--244
 \OT1/cmr/m/n/10 cent-age (con-fig-urable as a hyper-parameter, 20%
  []
 
 
-Overfull \hbox (4.14214pt too wide) in paragraph at lines 255--256
+Overfull \hbox (4.14214pt too wide) in paragraph at lines 247--248
 []\OT1/cmr/m/n/10 A layer of ar-ti-fi-cial neu-rons that does
  []
 
 
-Overfull \hbox (4.51184pt too wide) in paragraph at lines 255--256
+Overfull \hbox (4.51184pt too wide) in paragraph at lines 247--248
 \OT1/cmr/m/n/10 stead per-forms highly com-plex logic de-rived from
  []
 
 
-Overfull \hbox (7.76176pt too wide) in paragraph at lines 267--268
-\OT1/cmr/m/n/10 that deals with teach-ing ma-chines to learn, specif-
+Overfull \hbox (2.9269pt too wide) in paragraph at lines 251--252
+[]\OT1/cmr/m/n/10 A layer which does not take in-put from
  []
 
-[11
+
+Overfull \hbox (3.59508pt too wide) in paragraph at lines 259--260
+\OT1/cmr/m/n/10 gence that deals with teach-ing ma-chines to learn,
+ []
+
+
+Overfull \hbox (3.01184pt too wide) in paragraph at lines 259--260
+\OT1/cmr/m/n/10 specif-i-cally through pat-tern recog-ni-tion, feature-
+ []
+
+[10
 
 ]
-Overfull \hbox (0.70615pt too wide) in paragraph at lines 277--278
-\OT1/cmr/m/n/10 as a small change in in-puts cre-ates a much larger
+Overfull \hbox (11.6771pt too wide) in paragraph at lines 269--270
+[]\OT1/cmr/m/n/10 A com-mon, but out-dated, ar-ti-fi-cial model
  []
 
 
-Overfull \hbox (6.43633pt too wide) in paragraph at lines 281--282
-[]\OT1/cmr/m/n/10 A re-gres-sion prob-lem is a style
+Overfull \hbox (9.62755pt too wide) in paragraph at lines 271--272
+[]\OT1/cmr/m/n/10 A neu-ral net-
  []
 
 
-Overfull \hbox (1.1163pt too wide) in paragraph at lines 290--291
+Overfull \hbox (0.40996pt too wide) in paragraph at lines 271--272
+\OT1/cmr/m/n/10 is se-quen-tial and the length is vari-able; al-though
+ []
+
+
+Overfull \hbox (1.1163pt too wide) in paragraph at lines 282--283
 []\OT1/cmr/m/n/10 A method
+ []
+
+
+Overfull \hbox (0.26181pt too wide) in paragraph at lines 282--283
+\OT1/cmr/m/n/10 and the hill is the afore-men-tioned n-dimensional
+ []
+
+
+Overfull \hbox (14.5118pt too wide) in paragraph at lines 282--283
+\OT1/cmr/m/n/10 e-ter, plus-minus the learn-ing rate hyper-parameter,
+ []
+
+
+Overfull \hbox (1.94693pt too wide) in paragraph at lines 282--283
+\OT1/cmr/m/n/10 has the low-est re-sul-tant cost func-tion value. The
  []
 
 Missing character: There is no ã in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no € in font cmr10!
-
-Overfull \hbox (17.43427pt too wide) in paragraph at lines 294--295
-[]\OT1/cmr/m/n/10 SVMs are anolder
- []
-
-[12] [13
+[11] [12
 
 
 ] (./report.aux)
@@ -609,13 +634,13 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 9666 strings out of 494813
- 168396 string characters out of 6178109
- 592257 words of memory out of 5000000
- 12896 multiletter control sequences out of 15000+600000
- 9316 words of font info for 33 fonts, out of 8000000 for 9000
+ 9673 strings out of 494813
+ 168544 string characters out of 6178109
+ 592330 words of memory out of 5000000
+ 12902 multiletter control sequences out of 15000+600000
+ 9484 words of font info for 34 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 45i,8n,46p,1662b,1139s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,8n,46p,1563b,1139s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
@@ -632,11 +657,12 @@ hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (15 pages, 513350 bytes).
+nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmtt8.pfb>
+Output written on report.pdf (14 pages, 517723 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
+ 133 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,5 +1,8 @@
 \documentclass[]{report}
 
+%\usepackage{helvet}
+%\renewcommand{\familydefault}{\sfdefault}
+
 \setcounter{secnumdepth}{0}
 \usepackage[margin=1in]{geometry}
 \usepackage{caption}
@@ -28,7 +31,7 @@
 \maketitle
 
 \begin{abstract}
-	In this experiment the neuroplasticity of neural networks, both artificial and biological, was tested. Several configurations of computing machines, ranging from simple densely-layered feed-forward Multi-Layer Perceptrons (MLPs) and Artificial Neural Networks (ANNs) to more complex Recurrent Neural Networks (RNNs) were tested, using the human brain as a performance baseline. Also tested was a Support Vector Machine (SVM), a much older algorithm with a mathematically and not biologically inspired approach to classification, in order to gauge how far the field of Machine Learning has come in past decades both in terms of peak performance and neuroplasticity, measured in this investigation as the standard deviation of a model's error rate across a diverse range of problem domains. Each model was tested (with minor programmatic alterations to the input and output layers of each artificial model to account for differing input vector size) against several different classification and regression problems including but not limited to classifying handwritten digits (using the MNIST dataset) and performing sentiment analysis on highly polarized movie reviews. The neuroplasticity of each model was then evaluated given the error rates of each model across all problems tested. It was found that the human brain is still overall the most neuroplastic model across the full set of problem domains, with RNNs close behind in most respects. The MLPs and ANNs performed well on classification problems, outperforming the RNNs and even the human brain in several problem domains, but entirely failed to converge on the sentiment analysis problem.
+	In this experiment the neuroplasticity of neural networks, both artificial and biological, was tested. Several configurations of computing machines, ranging from simple densely-layered feed-forward Multi-Layer Perceptrons (MLPs) and Artificial Neural Networks (ANNs) to more complex Recurrent Neural Networks (RNNs), were tested, using the human brain as a performance baseline, in order to gauge how far the field of Machine Learning has come in past decades both in terms of performance and neuroplasticity, measured in this investigation as the standard deviation of a model's error rate across a diverse range of problem domains. Each model was tested (with minor programmatic alterations to the input and output layers of each artificial model to account for differing input vector size) against several different classification and regression problems including but not limited to classifying handwritten digits and performing sentiment analysis on highly polarized movie reviews. The neuroplasticity of each model was then evaluated given the error rates of each model across all problems tested. It was found that the human brain is still overall the most neuroplastic model across the full set of problem domains, with RNNs close behind in most respects. The MLPs and ANNs performed well on classification problems, outperforming the RNNs and even the human brain in several problem domains, but entirely failed to converge on the sentiment analysis problem due to their inability to learn from sequential data samples of differing lengths.
 \end{abstract}
 
 \tableofcontents
@@ -36,16 +39,15 @@
 
 \section{Introduction}
 
-The human brain is capable of rewiring itself throughout its lifetime (\cite{draganski2004neuroplasticity}). This feature, known as neuroplasticity, is the driving force behind the process of learning, and is present in a wide range of animals. It was first discovered in rats in the 1960s (\cite{bennett1964chemical}), and the theory behind it has applications as far as artificial intelligence and machine learning. In this investigation, the extent to which various artificial and biological intelligent agents exhibit neuroplasticity is tested, by teaching the same mdoels to perform very diverse tasks, compared to a baseline of the performance of the human brain.
+The human brain is capable of rewiring itself throughout its lifetime (\cite{draganski2004neuroplasticity}). This feature, known as neuroplasticity, is the driving force behind the process of learning, and is present in a wide range of animals. It was first discovered in rats in 1964 (\cite{bennett1964chemical}), and the theory behind it has applications as far as artificial intelligence and machine learning. In this investigation, the extent to which various artificial and biological intelligent agents exhibit neuroplasticity is tested, by teaching the same models to perform very diverse tasks, compared to a baseline of the performance of the human brain.
 
 The aim of this experiment is to determine how far behind in terms of neuroplasticity modern Artificial Neural Networks (ANNs) are when compared with the human brain. This is done by training the same artificial and biological neural network configurations to perform several different classification and regression tasks, and measuring the standard deviation of the error rates across each problem as a measure of neuroplasticity.
 
 It is hypothesised that:
 \begin{enumerate}
 	\item The human brain will marginally surpass state-of-the-art ANN configurations in all problem domains, and will perform exceptionally well in all problem domains. (Refer to the method on page \pageref{itm:Method} for a full list of problems tested.)
-	\item The Recurrent Neural Network (RNN) will perform well on all problems, but particularly the sentiment analysis problem.
+	\item The Recurrent Neural Network (RNN) will perform well on all problems, most notably the sentiment analysis problem.
 	\item The standard densely-layered feed-forward Artificial Neural Network (ANN) will perform acceptably on all problems except the sentiment analysis problem.
-	\item The Support Vector Machine (SVM) will perform well recognising handwritten digits and classifying iris genuses, but will perform sub-par in all other problem domains.
 \end{enumerate}
 
 \section{Literature Review}
@@ -69,13 +71,11 @@ A neural network is essentially a simplified computer abstraction of a brain, wi
 
 A neuron is typically represented by a series of numbers: an activation threshold (bias), and a series of numbers representing the strengths of connections with neurons in the previous layer (weights). Given the outputs (activations) of the neurons in the previous layer (or given the input data from the host program in the case of the input layer), a neuron's output (activation) will equal the sum of all of the previous layer's neurons' activations multiplied by their respective connection weights, with the activation threshold of the neuron in question subsequently being subtracted. In a more traditional perceptron model, the output would be transformed such that if the intermediary activation value is positive it is transformed to a binary 1, or a binary 0 if it is negative; however more modern models using sigmoid or ReLU activation functions (see the glossary on page \pageref{sec:Glossary} for more information activation/learning functions) usually transform this value into a floating-point decimal between 0 and 1. Note that these calculations do not apply to the input layer, which simply takes the input from the host program and does not possess its own weights and biases.
 
-In this experiment, both perceptron and sigmoid (!) neurons are tested, as well as a Support Vector Machine (SVM), an older algorithm designed for classification problems.
-
 \begin{Equation}
 	\begin{equation}
 		n_a = \left\{ \begin{array}{ll}
-		0 & \mbox{if } \sum_i M_{i_a} M_{i_w} \leq n_b \\
-		1 & \mbox{if } \sum_i M_{i_a} M_{i_w} > n_b
+		0 & \mbox{if } \sum_{x \subset S} x_a x_w \leq n_b \\
+		1 & \mbox{if } \sum_{x \subset S} x_a x_w > n_b
 		\end{array}\right.
 	\end{equation}
 	\caption{Activation (output value) of a perceptron}
@@ -83,12 +83,12 @@ In this experiment, both perceptron and sigmoid (!) neurons are tested, as well 
 
 \begin{Equation}
 	\begin{equation}
-		n_a = \sigma(\sum_{i=0}^{|M|}(M_{i_a} M_{i_w}) - n_b)
+		n_a = \sigma(\sum_{x \subset S}(x_a x_w) - n_b)
 	\end{equation}
 	\caption{Activation of an artificial neuron, given an activation function $\sigma$}
 \end{Equation}
 
-In the above equations, \(M\) is the set of neurons from the previous layer, \(M_{i_w}\) is the weight (axon-dendrite connection strength) of the \emph{i}th neuron of \emph{M} with the neuron in question, and \(M_{i_a}\) denotes the activation; \(n\) is the neuron whose output is being calculated and \(n_b\) its bias, so the above formula is in essence adding all of the connection weights multiplied by their outputs, before subtracting the bias. The output is wrapped in a function to make the output smoother and more efficient in learning (for example by creating a sigmoid curve featuring a sharp slope toward the centre, which in training forces the weights and biases to either extreme), but the choice of learning function is an irrelevant implementation detail.
+In the above equations, \(S\) is the set of neurons from the previous layer, \(x_w\) is the weight (axon-dendrite connection strength) of the \emph{i}th neuron of \emph{S} with the neuron in question, and \(x_a\) denotes the activation; \(n\) is the neuron whose output is being calculated and \(n_b\) its bias, so the above formula is in essence adding all of the connection weights multiplied by their outputs, before subtracting the bias. The output is wrapped in a function to make the output smoother and more efficient in learning (for example by creating a sigmoid curve featuring a sharp slope toward the centre, which in training forces the weights and biases to either extreme), but the choice of learning function is an irrelevant implementation detail.
 
 The weights and biases of each neuron and neuronal connection are optimised to serve a specific purpose through the process of training the neural network to perform a given task. Usually, these values will start as random numbers, and through a process known as Stochastic Gradient Descent (SGD) the values are slowly optimised until the model is sufficiently good at its task. In each iteration of the algorithm the trainable parameters of the model are randomly mutated, and the new model is tested for performance at the task. If the performance of the mutated model exceeds that of the original, the mutated model succeeds the original. This process is repeated millions of times until the performance starts to plateau. (Refer to the glossary on page \pageref{itm:SGD} for more information on SGD.) There are many applications for neural networks: A neural network may be trained to classify images (computer vision and optical character recognition), to estimate data such as house or stock prices given data about their respective markets, or even to control robots. This ability to excel in a wide range of problem domains is investigated in this report.
 
@@ -97,10 +97,9 @@ Nodes in neural networks are quite similar to their biological counterparts, in 
 \label{itm:Method}
 \section{Method}
 
-There are 20 artificial neural networks (!) and 1 biological neural network tested in this experiment, against 4 different classification and regression problems, each in different problem domains. The neural network configurations are as follows:
+There are 20 artificial neural networks and 1 biological neural network tested in this experiment, against 4 different classification and regression problems, each in different problem domains. The neural network configurations are as follows:
 
 \begin{enumerate}
-	\item A Support Vector Machine (SVM), to show the inefficiency of older mathematical approaches to intelligence compared to those which are biologically inspired.
 	\item 8 different densely-layered feed-forward Multi-Layer Perceptrons (MLPs) using perceptrons instead of sigmoid-activated neurons (2 sets of 4 different models with differing hidden layer configurations, one set with dropout (\cite{dropout14}) and one without).
 	\newline
 	The 4 hidden layer configurations are:
@@ -117,49 +116,42 @@ There are 20 artificial neural networks (!) and 1 biological neural network test
 	\item 4 Recurrent Neural Networks (RNNs), with 1 Long Short-Term Memory (LSTM) hidden layer containing 32 or 128 neurons. Two models have dropout, the others do not.
 	\newline
 	The recurrent neural networks use RMSprop (\cite{hinton2012neural}) instead of SGD as an optimisation algorithm, as it has been noted to perform better with RNNs.
-	\item As a baseline for performance and neuroplasticity, several people were also used. (!)
+	\item As a baseline for performance and neuroplasticity, several people were also used.
 \end{enumerate}
 
-It was decided that Convolutional Neural Networks (CNNs) should not be included in the experiment, as although they are a very popular type of neural network in image processing, they only work with multidimensional spatial or temporal data (their primary use-cases are in computer vision, optical character recognition, and audio analysis.) This means that they cannot feasibly compute linear regression or non-temporal classification functions without having their kernel layers configured to apply no transformation to the data (by having nil values for all kernel cells except the centre, which would have a 1, such that each kernel operation acts similarly to a cat program.)
+It was decided that Convolutional Neural Networks (CNNs) should not be included in the experiment, as although they are a very popular type of neural network in image processing, they only work with multidimensional spatial or temporal data (their primary use-cases are in computer vision, optical character recognition, and audio analysis), and would require significant structural change to compute problems with non-temporal data (changing the convolutional layers between one and two dimensions at runtime). This means that they cannot feasibly compute linear regression or non-temporal classification functions without having their kernel layers configured to apply no transformation to the data (by having nil values for all kernel cells except the centre, which would have a 1, such that each kernel operation acts similarly to a cat program) or by being configured to operate in only one dimension.
 
 Each of the above models is tested against the following classification and regression problems:
 
 \begin{enumerate}
-	\item Handwritten digit recognition (using the MNIST dataset\footnote{The MNIST dataset is available at: http://yann.lecun.com/exdb/mnist/})
-	\item Iris flower classification (using Fisher's dataset\footnote{The iris dataset is available at: http://archive.ics.uci.edu/ml/datasets/Iris (UCI ML repository courtesy of \cite{uciml2007})})
-	\item Sentiment analysis (using the Large Movie Review Dataset (\cite{maas2011imdb}))
-	\item Breast cancer diagnosis (using the University of Wisconsin dataset\footnote{The breast cancer diagnosis dataset is available at: http://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)})
+	\item Handwritten digit recognition (using the MNIST dataset\footnote{The MNIST dataset is available at: \texttt{http://yann.lecun.com/exdb/mnist/}})
+	\item Iris flower classification (using Fisher's dataset\footnote{The iris dataset is available at: \texttt{http://archive.ics.uci.edu/ml/datasets/Iris}} (\cite{uciml2007}))
+	\item Sentiment analysis (using the Large Movie Review Dataset\footnote{The movie review dataset is available at \texttt{http://ai.stanford.edu/~amaas/data/sentiment/}} (\cite{maas2011imdb}))
+	\item Breast cancer diagnosis (using the University of Wisconsin dataset\footnote{The breast cancer diagnosis dataset is available at: \texttt{http://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)}})
 \end{enumerate}
 
-The human brain will be tested against each of the aforementioned problems, although due to the varying nature and medium in which the datasets above are presented in, which means different cortices of the human brain will be used for different problem domains, the human participants will have a not insignificant advantage over their machine counterparts.
-
-To avoid allowing the human test subjects to utilise areas of their brains which have already been trained in the problem domains this experiment is testing (such as allowing a native English speaker perform the sentiment analysis problem on polarised English movie reviews), all of the textual samples have been machine-translated (using Google Translate) into Korean, a lanuage with significantly differing grammar from English, which does not share any recent linguistic roots, and which is reliably machine-translated. Additionally, in the digit recognition problem, all images of handwritten digits are transformed using a randomly generated feature-extraction algorithm so as to be different enough from their source images as to be indiscernible by an untrained eye previously aquainted with Arabic digits.
-
-This way, whilst different cortices within the neocortex will be used by test subjects, the human subjects will not have a significant unfair advantage over their machine counterparts beyond the scale of their brains and the level of structural and/or learning algorithm optimisation (through natural selection or through stochastic gradient descent algorithms) accessible to them. The issue of human participants being able to use different cortices for different problem domains is unavoidable, as the only other alternative is to present all data in an identical format, such as numerically, which would prove too time consuming for participants.
+The human brain was tested against each of the aforementioned problems, although due to the varying nature and medium in which the datasets above are presented (meaning different cortices of the human brain will be used for different problem domains) the human participants will have a significant advantage over their machine counterparts. The issue of human participants being able to use different cortices for different problems is unavoidable, as the only other alternative would be to present all data in an identical format, such as numerically, which would prove far too time consuming for participants.
 
 The experiment was conducted in two phases for each combination of model (artificial or biological) and problem: the training phase, and the testing phase.
 
-In the training phase, the artificial models were fed data along with the desired results from the respective datasets and left to their own devices, to implement their own optimisation algorithms. The people involved in the experiment were given the data similarly; however the data was printed and arranged in a more familiar tabular format. (!)
+In the training phase, the artificial models were fed data along with the desired results from the respective datasets and left to their own devices, to implement their own optimisation algorithms. The participants were given the data similarly; however the data was printed and arranged in a more familiar format. (!)
 
-In the testing phase, each model and participant was given data as in the previous stage, however the desired results were omitted, and the models and participants had to make predictions (or classifications, depending on the nature of the problem) based on inferences made from the training data. Note that participants were allowed to keep a copy of the training data for reference, due to memory limitations.
+In the testing phase, each model and participant was given data as in the previous stage, however the desired results were omitted, and the models and participants had to make predictions (or classifications, depending on the nature of the problem) based on inferences made from the training data. Note that participants were allowed to keep a copy of the training data for reference, due to memory and time limitations.
 
-For each model-problem combination, the performance was measured as the accuracy of the model or participant in the testing phase. After testing a model against all of the problem domains, mean performance and neuroplasticity were calculated. Neuroplasticity was measured as the standard deviation of the performance/error rate (in calculating standard deviation only the distribution, and not the absolute values, are important, such that the standard deviation of the performance metrics and the error rates (inverse of the performance) are identical) of the model or participant across all of the problems tested (lower is better). In evaluating the overall performance of a model, both the mean performance and neuroplasticity metrics were considered, as a model which fails to converge on any problem domains and thus achieves a consistent 50\% accuracy could be said to be more neuroplastic than a model which performs excellently on some problems and poorly on others when using standard deviation as a measure.
+For each model-problem combination, the performance was measured as the accuracy of the model or participant in the testing phase. After testing a model against all of the problem domains, mean performance and neuroplasticity were calculated. Neuroplasticity was measured as the standard deviation of the performance/error rate (in calculating standard deviation only the distribution, and not the absolute values, were important, such that the standard deviation of the performance metrics and the error rates (inverse of the performance) were identical) of the model or participant across all of the problems tested (lower is better). In evaluating the overall performance of a model, both the mean performance and neuroplasticity metrics were considered as opposed to neuroplasticity alone, as a model which fails to converge on any problem domains and thus achieves a consistent 50\% accuracy could be said to be more neuroplastic than a model which performs excellently on some problems and acceptably on others when using standard deviation as a measure.
 
 \begin{Equation}
 	\begin{equation}
-	\sqrt{\frac{(\sum_{i=0}^{|P|}P_i - \bar{P})^2}{|P|}}
+	\sqrt{\frac{((\sum_{i=0}^{|P|} P_i) - \bar{P})^2}{|P|}}
 	\end{equation}
-	\caption{
-		Calculation of neuroplasticity, derived from the forumla for population standard deviation
-	}
+	\caption{Calculation of neuroplasticity, derived from the forumla for population standard deviation}
 \end{Equation}
-
-
-In the above equation, \(P\) denotes the set of performance metrics for a model or participant.
 
 \section{Results}
 
-In the following charts, model names are abbreviated such that a Multi-Layer Perceptron (MLP) with 2 hidden layers filled with 256 neurons and with dropout is \textit{MLP 256D,256D}, and without dropout is \textit{MLP 256,256}. All data recorded is from the experiments mentioned above, with the exception of the human MNIST error rate, which according to \cite{simard1993efficient}, averages at about 1.5\%. (!)
+The human error rates for the MNIST problem and breast cancer diagnosis were sourced from other literature; according to \cite{simard1993efficient}, the human MNIST accuracy averages at about 98.5\% (keeping in mind many of the samples are barely legible and written by high school students), and according to \cite{mangasarian1995breast} the accuracy of fine needle aspiration cytology (the method that ANNs in this investigation were trained to perform) as practiced by physicians averages at 82\%.
+
+\textit{Note: in the following charts, model names are abbreviated such that a Multi-Layer Perceptron (MLP) with 2 hidden layers filled with 256 neurons and with dropout is denoted as \textit{MLP 256D,256D}, and without dropout as \textit{MLP 256,256}.}
 
 \begin{figure}[H]
 	\centering
@@ -186,7 +178,7 @@ In the following charts, model names are abbreviated such that a Multi-Layer Per
 	\begin{subfigure}[b]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{chart4.png}
 	\end{subfigure}
-~
+	~
 	\begin{subfigure}[b]{0.45\textwidth}
 		\includegraphics[width=\textwidth]{chart5.png}
 	\end{subfigure}
@@ -197,46 +189,46 @@ In the following charts, model names are abbreviated such that a Multi-Layer Per
 
 The Recurrent Neural Networks performed best across all problem domains out of the artificial models. Of the RNNs, the most complex RNN with 1 hidden layer with 128 neurons and 20\% dropout performed the best, with an error standard deviation of 10.2\%, the lowest across all artificial models, and the third highest mean performance (1.11\% behind the \emph{MLP 256D}). The RNNs were heavily advantaged in the sentiment analysis problem, as they were the only models capable of creating meaningful feature relationships between the data and the expected results, as it was sequential. None of the other models converged on the sentiment analysis problem, as they recieved the data as a single contiguous stream without word boundaries, without any constant feature mapping for each step in the process of SGD optimisation that did not rely on sample memorisation, which would have led to extreme overfitting. As a result, the accuracy on the sentiment analysis problem for all MLP and ANN models was equivalent to random guesswork over the 25000 test reviews supplied to the program; such that the accuracy was $\frac{1}{|C|} = \frac{1}{2} = 0.5$ where $C$ is a set of valid output classes (in this instance a set of two classes --- positive and negative sentiment).
 
-Despite RNNs having the advantage in the natural language parsing problem domain, RNNs did not have time to fully converge in the MNIST digit recognition problem. Even when MNIST images were downsampled to a ninth of the size specifically for the MNIST-RNN test combination, each of the 8 epochs took an average of 20 minutes, as opposed to an average of 3.630 seconds in all of the ANN and MLP models. In fact, many of the more optimised ANN models (primarily those with 20\% dropout) began to diverge in under a minute, becoming overfit to the training data such that they lost accuracy on the test set. This is due to both the computational complexity of evaluating the data flow of an RNN relative to that of an ANN, and as there were thousands of times more trainable parameters subject to the stochastic gradient descent algorithm in RNNs as in the ANNs and MLPs (to illustrate, the simplest ANN had 59 trainable parameters, whereas the most complex RNN had 233223 trainable parameters). ANNs were much faster to train (in one test run, the \emph{MLP 512D,512D} achieved 99.41\% test accuracy after 3.640 seconds of training) and performed much better on non-sequential data, but entirely failed to converge on the sentiment analysis problem.
+Despite RNNs having the advantage in the natural language parsing problem domain, RNNs did not have time to fully converge in the MNIST digit recognition problem. Even when MNIST images were downsampled to a ninth of the size specifically for the MNIST-RNN test combination, each of the 8 training epochs took an average of 20 minutes, as opposed to an average of 3.630 seconds in all of the ANN and MLP models. In fact, many of the more optimised ANN models (primarily those with 20\% dropout) began to diverge in under a minute, becoming overfit to the training data such that they lost accuracy on the test set. This is both due to the computational complexity of evaluating the data flow of an RNN relative to that of an ANN, and to the fact that there were thousands of times more trainable parameters subject to the stochastic gradient descent algorithm in RNNs as in the ANNs and MLPs (to illustrate, the simplest ANN had 59 trainable parameters, whereas the most complex RNN had 233223 trainable parameters). ANNs were much faster to train (in one test run, the \emph{MLP 512D,512D} achieved 99.41\% test accuracy after 3.640 seconds of training) and performed much better on non-sequential data, but entirely failed to converge on the sentiment analysis problem.
 
-The higher-end MLP and ANN models with dropout (\emph{MLP 512D,512D} and \emph{ANN 512D,512D}) reached extremely high accuracy on the MNIST digit recognition problem; the ANN achieved 99.71\% accuracy, a mere 0.06\% behind the world record (\cite{ciregan2012multi}), despite being one of the simpler models and requiring under a minute to complete 20 training epochs, using hardware acceleration on a consumer-grade GPU.
+The higher-end MLP and ANN models with dropout (\emph{MLP 512D,512D} and \emph{ANN 512D,512D}) reached extremely high accuracy on the MNIST digit recognition problem; the ANN achieved 99.71\% accuracy, a mere 0.06\% behind the world record (\cite{ciregan2012multi}), despite being one of the simpler models and requiring under a minute to complete 20 training epochs, using hardware acceleration on a consumer-grade graphics processing unit.
 
-There was one test which failed entirely --- the RNN 32 against the cancer diagnosis problem. For some unknown reason the network failed to learn from the data entirely and persistently resulted in an accuracy of 0, although the RNN 32D which differed only in having 20\% dropout, achieved 87.67\% accuracy on the same problem. This error is likely due to a problem with the primary dependency Keras (see \textit{Appendix I}) or the way in which the programs used interface with it, as the RNN 32D and RNN 128 were both unaffected despite sharing the same code, aside from runtime parameters specifying the nature of the hidden layers.
+There was one test which failed entirely --- the \emph{RNN 32} against the cancer diagnosis problem. For some unknown reason the network failed to learn from the data entirely and persistently resulted in an accuracy of 0, although the \emph{RNN 32D} which differed only in having 20\% dropout achieved 87.67\% accuracy on the same problem, and the \emph{RNN 128} achieved 42.25\%. This error is likely due to a problem with the primary dependency Keras (see \emph{Implementation Details} on page \pageref{sec:Appendix_I}) or the way in which the programs used interface with it, as the \emph{RNN 32D} and \emph{RNN 128} were both unaffected despite sharing the same code, aside from hyper-parameters specified at runtime.
 
 \section{Conclusion}
 
-Overall, it is clear that Recurrent Neural Networks are the future of machine learning. Even if they don't necessarily use the LSTM neuron model used in this experiment, the way in which they are able to interpret sequential data makes them much more valuable across differing problem domains. They are also much more closely modelled to the human brain, which is and has been the blueprint for machine learning models since the inception of the field late last century, and is the source of inspiration for many of the successful model architectures within the field, from simple binary perceptrons to LSTM neurons capable of drawing meaningful relationships in a series of sequential data.
+Overall, it is clear that Recurrent Neural Networks are the future of machine learning. Even if they do not necessarily use the LSTM neuron model used in this experiment, the way in which they are able to interpret sequential data makes them much more valuable across differing problem domains. They are also much more closely modelled to the human brain, which is and has been the blueprint for machine learning models since the inception of the field late last century, and is the source of inspiration for many of the successful model architectures within the field, from simple binary perceptrons to LSTM neurons capable of drawing meaningful relationships in a series of sequential data.
 
-However, overall the human brain performed the best in this experiment. Whilst many of the artificial models surpassed human ability in one or two problem domains, no single artificial model surpassed the human brain in every task, despite the tasks being relatively simple for a neural network to solve (with the exception of the sentiment analysis problem). Despite having less training time on the cancer diagnosis and iris classification problems, the human brain was still the most neuroplastic across all of the problem domains. (!)
+However, overall the human brain performed the best in this experiment. Whilst many of the artificial models surpassed human ability in one or two problem domains, no single artificial model surpassed the human brain in every task, despite the tasks being relatively simple for a neural network to solve (with the exception of the sentiment analysis problem). Despite having less training time, the human brain was still the most neuroplastic.
 
-All in all, this experiment has shown that state-of-the-art artificial intelligence techniques, despite having superhuman results in very narrow problem domains, are far from capable of achieving general intelligence, at least given our current hardware. The human brain still has 7 orders of magnitude more neurons than the most expansive of the models utilised in this experiment (1024 neurons compared to 100 billion (\cite{herculano2009human})), and has mechanisms at play so complex that researchers have struggled even to fully simulate the brain of the C. Elegans, a transparent worm with only 959 neurons, whose connectome has been fully mapped for decades (\cite{wormwiring2012}). At the current point in time, neither the software to supervise the training of an AGI nor the hardware to implement the data flow of the network (let alone the training, of which is considerably more computationally expensive) exists, and will not for many decades at the current rate of progress.
-
-Todo:
+All in all, this experiment has shown that state-of-the-art artificial intelligence techniques, despite having superhuman results in very narrow problem domains, are far from achieving general intelligence, at least given current hardware. The human brain still has 7 orders of magnitude more neurons than the most expansive of the models utilised in this experiment (1024 neurons compared to approximately 100 billion (\cite{herculano2009human})), and has mechanisms at play so complex that researchers have struggled even to fully simulate the brain of the C.Elegans, a transparent worm with only 959 neurons, whose connectome has been fully mapped for decades (\cite{wormwiring2012}). At the current point in time, neither the software to supervise the training of an AGI nor the hardware to implement the data flow of the network (let alone the training, which is several orders of magnitude more computationally expensive) exists, and will not for many decades at the current rate of progress.
 
 \begin{enumerate}
-	\item Do not use contractions
 	\item Sigmoid, ReLU, heaviside
-	\item Human accuracy testing
-	\item SVM
-	\item Glossary
+	\item Fix method, make reproducible, mention variables
+	\item Human data
 	\item Rubric
 	\item Fix (!)s
 	\item Tables?
+	\item Charts
+	\item Use neuroplasticity as a training target? Train hyper-parameters?
+	\item Fonts
 \end{enumerate}
 
 \section{Appendices}
 
+\label{sec:Appendix_I}
 \subsection{Appendix I: Implementation Details}
 
-The Python 3 source code files for all of the aforementioned artificial models are available online through the Git repository hosted at following URL: https://github.com/Tobsta/ScienceFair
+All of the deep learning models tested were implemented in the Python 3 programming language, using the Keras machine learning library with a TensorFlow backend. It was decided to use a stable machine learning framework such as Keras to create easily reproducible results and to make it much easier to verify that the programs used in the experiment do not have any flaws undermining their validity.
 
-All of the deep learning models tested were implemented in the Python 3 programming language, using the Keras machine learning library with a TensorFlow backend. It was decided to use a stable machine learning framework such as Keras to create easily reproducible results and to make it much easier to verify that the programs used in the experiment did not have any flaws undermining the validity of the experiment.
+The Python 3 source code files for all of the aforementioned artificial models are available online through the Git repository hosted at following URL: \texttt{https://github.com/Tobsta/ScienceFair/tree/master/src}. Each overarching model architecture (ANN, MLP, RNN) has its own file (\texttt{src/ann.py} etc.) which accepts a loaded dataset and hyper-parameters from the main program, and each dataset has its own file which serves to load it from memory. The main program which coordinates the interaction between the models and the datasets is in the file \texttt{src/main.py}, which can be run in a terminal using the command \texttt{python3 main.py}. The program's dependencies include Tensorflow (\texttt{tensorflow-gpu==1.5.0} used in testing), Keras, and numpy; all of which may be installed using Python's \texttt{pip} package manager.
 
 \twocolumn
 \label{sec:Glossary}
 \subsection{Glossary}
 \begin{description}
-\item[Activation function:] A function is used to transform the output value of neurons to adapt the rate at which they learn. Examples include the sigmoid and ReLU functions.
+\item[Activation function:] A function used to transform the output value of neurons to adapt the rate at which they learn. Examples include the sigmoid and ReLU functions.
 
 \item[Artificial General Intelligence (AGI):] An intelligent agent capable of learning to accomplish many general tasks at least as well as a human, as opposed to specialising in a particular task. At this stage, AGIs are mostly a topic of science fiction and radical speculation; however many experts believe that general intelligence is mere decades away. In a survey of prominent AI researchers, the median estimation for when there will be a 50\% chance of AGIs having been developed was 100 years from 2016 (\cite{grace2017will}).
 
@@ -256,42 +248,42 @@ All of the deep learning models tested were implemented in the Python 3 programm
 
 \item[Hyper-parameter:] A global parameter in an artificial model that is pre-selected by the model designer and which dictates how the model will be organised or how it will train. The number of neurons in a hidden layer and the learning rate (step size of the SGD algorithm) are both examples of hyper-parameters.
 
-\item[Input Layer:] A layer which doesn't take input from the previous layer, but rather from the host program, usually in the form of a sample in a dataset specific to the problem domain the model is being trained for.
+\item[Input Layer:] A layer which does not take input from the previous layer, but rather from the host program, usually in the form of a sample in a dataset specific to the problem domain the model is being trained for.
 
 \item[Learning function:] See \textit{Activation Function}
 
-\item[Learning rate:] A hyper-parameter that is used as the maximum deviance random permutations made during the process of stochastic gradient descent may be. A higher learning rate means the model will train faster, but it also means it may not converge as well, unless the learning rate is decreased each epoch to make it more sensitive to fine-tuning.
+\item[Learning rate:] A hyper-parameter that is used as the maximum deviance random permutations made during the process of stochastic gradient descent may be. A higher learning rate means the model will train faster and will not fall into any local minimums, but also means it may not converge as well, unless the learning rate is decreased each epoch to make it more sensitive to fine-tuning.
 
 \item[Long Short-Term Memory (LSTM):] A type of artificial neuron used in RNNs, designed to retain information for sequential information processing.
 
-\item[Machine Learning:] (!) A subfield of artificial intelligence (itself a subfield of computer science) that deals with teaching machines to learn, specifically through pattern recognition and feature mapping algorithms, and the creation of inference engines.
+\item[Machine Learning:] A subfield of artificial intelligence that deals with teaching machines to learn, specifically through pattern recognition, feature-mapping, evolutionary algorithms, and inference engines.
 
 \item[Neuroplasticity:] The ability of a brain or machine learning model to adapt to fit different problem domains without modifying the overall structure (i.e. by changing only the synapse connections and activation thresholds for neurons, and not the underlying algorithms).
 
-\item[One-Hot Encoding:] One-hot encoding is the process of converting a class ID to an array of numbers equal to the number of classes, populated with zeros, aside from the number at the index of the class ID, which is a one. To illustrate, the classes "Cat", "Dog", and "Horse" could be represented as [1,0,0], [0,1,0], and [0,0,1] with one-hot encoding. One-hot encoding is much easier for an ANN to work with when operating on class-based data, especially in an output layer of a classification model (see softmax).
+\item[One-Hot Encoding:] The process of converting a class label to an array of numbers equal to the number of classes, populated with zeros, aside from the number at the index of the class label, which is a one. To illustrate, the classes "Cat", "Dog", and "Horse" could be represented as [1,0,0], [0,1,0], and [0,0,1] with one-hot encoding assuming the full ordered set of classes is {"Cat", "Dog", "Horse"}. One-hot encoding is better than other encoding methods for feature mapping algorithms operating on classed data, especially in an output layer of a classification model (see \emph{softmax}).
 
-\item[Output Layer:] The output layer of an ANN is the layer which calculates the final result. In classification problems, each neuron in the output layer will typically map to a sample class. The result of the output layer is then compared to the one-hot encoded class of the sample in the cost function to determine the error rate.
+\item[Output Layer:] The layer which creates the final computation and returns it to the host program. In classification problems, each neuron in the output layer will typically map to a class in the dataset. The result of the output layer is then compared to the one-hot encoded class of the sample in the cost function to determine the error rate.
 
-\item[Overfitting:] If a model is overfit, it is so fine-tuned to operating on its training dataset that it performs poorly during validation and testing.
+\item[Overfitting:] The process of over-training a model; an overfit model is so finely tuned to its training dataset that it performs poorly during validation and testing.
 
-\item[Perceptron:] A perceptron is a common, but outdated, artificial model of a neuron which has a binary output as opposed to a floating-point one. This means that they are harder to train, as a small change in inputs creates a much larger change in output.
+\item[Perceptron:] A common, but outdated, artificial model of a neuron which has a binary as opposed to floating-point output. This means as a small change in inputs creates a much larger change in output, they are much less sensitive to training algorithms such as SGD.
 
-\item[Recurrent Neural Network (RNN):] An RNN is a neural network which runs recursively on a sequence of data, using previous inferences as input in addition to the chunks of the sequence data. RNNs are used for speech recognition, text classification (such as sentiment analysis) and many other problem domains in which the data is sequential and the length is variable; although RNNs can also be trained to work as less efficient ANNs with fixed vector size inputs and outputs.
+\item[Recurrent Neural Network (RNN):] A neural network which runs recursively on a sequence of data, using previous inferences as input in addition to the next segment of data. RNNs are predominantly used for speech recognition, text classification (such as sentiment analysis) and many other problem domains in which the data is sequential and the length is variable; although RNNs can also be trained to work as less efficient ANNs with fixed vector size inputs and outputs.
 
-\item[Regression problem:] A regression problem is a style of problem where a model is trained to find the relationship between input and output data. One example of a regression problem is estimating the selling price of a house given data on it (number of bedrooms, size of the block, etc.)	
+\item[Regression problem:] A type of problem where a model is trained to find the relationship between input and output data. One example of a regression problem is estimating the selling price of a house given data on it (such as the number of bedrooms).	
 
-\item[ReLU] ReLUs (Rectified Linear Units) are a simple activation (learning) function that returns the input or 0, whichever is greater.
+\item[ReLU (Rectified Linear Unit)] A simple activation (learning) function that returns the greater out of the input or 0.
 
-\item[RMSprop] RMSprop is a learning algorithm (not to be confused with a learning/activation function) similar to stochastic gradient descent, except instead of specifying a learning rate hyper-parameter the learning rate is adjusted given the gradient of each trainable parameter of the model. This means that the model is immune to both falling into a local minimum and plateauing during training, and to being so insensitive to a steep gradient that it diverges away from the global maximum.
+\item[RMSprop] A learning algorithm (not to be confused with a learning/activation function) similar to SGD, except the learning rate is adjusted given the gradient of each trainable parameter of the model, instead of being specified as a hyper-parameter. This means that the model is robust against both falling into a local minimum and plateauing during training, and to being so insensitive to a steep gradient that it diverges away from the global minimum.
 
-\item[Sigmoid function:] The sigmoid function is a learning function that creates an S-shaped curve.
+\item[Sigmoid function:] A learning function that creates an S-shaped curve with a steeper gradient toward the middle. It is used to force parameters to either extreme, speeding up the early stages of training.
 
 \label{itm:SGD}
-\item[Stochastic Gradient Descent (SGD):] A method of minimising the error function of a neural network model (or other machine learning model) given multivariate input, in which the the input parameters are viewed as axes on an n-dimensional graph with the cost function as the Y-axis. SGD attempts to find the global minimum of the cost function without calculating it for every possible combination of parameters by rolling the ball (vector representing the weights and biases of the neural network) down the hill (this analogy only really works with 2 parameters as the X and Z axes and the cost function as the Y axis, but it can be expanded to work with n dimensions.) Local minimums are avoided by the learning rate hyper-parameter, indicative of the length of the step taken (ideally toward the global minimum) in each iteration of the SGD algorithm. The direction gradient toward the local minimum is estimated by calculating the partial derivative of the cost function with respect to each parameter, and determining which parameter, plus-minus the learning rate hyper-parameter, has the lowest result of the cost function.
+\item[Stochastic Gradient Descent (SGD):] A method of minimising the error function of a neural network model (or other machine learning model) given multivariate input, in which the the input parameters are viewed as axes on an n-dimensional graph with the cost (error) function as the Y-axis. SGD attempts to find the global minimum of the cost function without calculating it for every possible combination of parameters by 'rolling a ball down a hill'; where the ball is a vector representing the weights and biases of the neural network in the latent space, and the hill is the aforementioned n-dimensional graph. In each iteration of the SGD algorithm, the direction gradient toward the local minimum is estimated by calculating the partial derivative of the cost function with respect to each parameter, and determining which parameter, plus-minus the learning rate hyper-parameter, has the lowest resultant cost function value. The relevant parameter is then shifted to the new position. Typically, there will be millions of iterations.
 
-\item[Softmax:] Softmax is an activation (learning) function that scales all outputs from a layer from 0 to 1, such that the sum of all outputs is 1. It is typically used for the output layer of a classification neural network, as a kind of floating-point one-hot encoding method.
+\item[Softmax:] An activation function that scales all outputs from a layer from 0 to 1, such that the sum of all outputs is 1. It is typically used for the output layer of a classification neural network, as a floating-point alternative to the one-hot encoding method.
 
-\item[Support Vector Machine (SVM):] SVMs are an　older method of machine learning which uses mathematically and not biologically inspired linear and non-linear regression algorithms to classify numerical data into distinct classifications.
+\item[Support Vector Machine (SVM):] An　older algorithm machine learning which uses a mathematically and not biologically inspired linear and non-linear regression algorithms to classify data.
 \end{description}
 \onecolumn
 
