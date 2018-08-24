@@ -1,17 +1,17 @@
 [1] Config.pm:354> INFO - This is Biber 2.7 (beta)
 [2] Config.pm:357> INFO - Logfile is 'report.blg'
-[49] biber:303> INFO - === Sat Aug 18, 2018, 16:31:06
-[68] Biber.pm:360> INFO - Reading 'report.bcf'
-[173] Biber.pm:836> INFO - Found 16 citekeys in bib section 0
-[195] Biber.pm:3671> INFO - Processing section 0
-[214] Biber.pm:3841> INFO - Looking for bibtex format file './report.bib' for section 0
-[220] bibtex.pm:1424> INFO - Decoding LaTeX character macros into UTF-8
-[232] bibtex.pm:1281> INFO - Found BibTeX data source './report.bib'
-[410] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[410] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[410] Biber.pm:3500> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'en-US'
-[410] Biber.pm:3506> INFO - No sort tailoring available for locale 'en-US'
-[447] bbl.pm:608> INFO - Writing 'report.bbl' with encoding 'ascii'
-[451] Utils.pm:164> WARN - The entry 'ciregan2012multi' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
-[457] bbl.pm:712> INFO - Output to report.bbl
-[457] Biber.pm:110> INFO - WARNINGS: 1
+[111] biber:303> INFO - === Fri Aug 24, 2018, 18:04:44
+[260] Biber.pm:360> INFO - Reading 'report.bcf'
+[368] Biber.pm:836> INFO - Found 16 citekeys in bib section 0
+[391] Biber.pm:3671> INFO - Processing section 0
+[484] Biber.pm:3841> INFO - Looking for bibtex format file './report.bib' for section 0
+[486] bibtex.pm:1424> INFO - Decoding LaTeX character macros into UTF-8
+[517] bibtex.pm:1281> INFO - Found BibTeX data source './report.bib'
+[688] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[689] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[689] Biber.pm:3500> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'en-US'
+[689] Biber.pm:3506> INFO - No sort tailoring available for locale 'en-US'
+[746] bbl.pm:608> INFO - Writing 'report.bbl' with encoding 'ascii'
+[751] Utils.pm:164> WARN - The entry 'ciregan2012multi' has characters which cannot be encoded in 'ascii'. Recoding problematic characters into macros.
+[756] bbl.pm:712> INFO - Output to report.bbl
+[756] Biber.pm:110> INFO - WARNINGS: 1

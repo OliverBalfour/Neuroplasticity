@@ -16,6 +16,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Appendices}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Appendix I: Implementation Details}{9}
+\contentsline {subsection}{Appendix I: AI Implementation Details}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{Glossary}{10}
+\contentsline {subsection}{Appendix II: Human Data Presentation Details}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{Glossary}{11}

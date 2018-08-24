@@ -2160,8 +2160,10 @@
     <bcf:citekey order="14">ciregan2012multi</bcf:citekey>
     <bcf:citekey order="15">herculano2009human</bcf:citekey>
     <bcf:citekey order="16">wormwiring2012</bcf:citekey>
-    <bcf:citekey order="17">grace2017will</bcf:citekey>
-    <bcf:citekey order="18">dropout14</bcf:citekey>
+    <bcf:citekey order="17">simard1993efficient</bcf:citekey>
+    <bcf:citekey order="18">mangasarian1995breast</bcf:citekey>
+    <bcf:citekey order="19">grace2017will</bcf:citekey>
+    <bcf:citekey order="20">dropout14</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt/global/" type="entry" sortscheme="nyt" sortnamekeyscheme="global" labelprefix="">
   <bcf:sorting>
