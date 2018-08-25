@@ -24,7 +24,7 @@
 
 \date{%
 	Alfred Deakin High School\\[2ex]%
-	\today
+	August 24, 2018
 }
 
 \begin{document}
@@ -97,7 +97,7 @@ Nodes in neural networks are quite similar to their biological counterparts, in 
 \label{itm:Method}
 \section{Method}
 
-There are 20 artificial neural networks and 1 biological neural network tested in this experiment, against 4 different classification and regression problems, each in different problem domains. The neural network configurations are as follows:
+There were 20 artificial neural networks and 1 biological neural network tested in this experiment, against 4 different classification and regression problems, each in different problem domains. The neural network configurations are as follows:
 
 \begin{enumerate}
 	\item 8 different densely-layered feed-forward Multi-Layer Perceptrons (MLPs) using perceptrons instead of sigmoid-activated neurons (2 sets of 4 different models with differing hidden layer configurations, one set with dropout (\cite{dropout14}) and one without).
@@ -112,27 +112,30 @@ There are 20 artificial neural networks and 1 biological neural network tested i
 	All dropout-enabled models have the dropout percentage set to 20\% (so 20\% of neurons are randomly discarded throughout the learning process.)
 	\item 8 standard densely-layered feed-forward sigmoid Artificial Neural Networks (ANNs), with hidden layer configurations identical to those of the MLPs above, aside from the nonbinary sigmoid activation function.
 	\newline
-	The sigmoid activation function used is defined as \(\sigma(x) = \frac{1}{1+e^{-x}}\)
-	\item 4 Recurrent Neural Networks (RNNs), with 1 Long Short-Term Memory (LSTM) hidden layer containing 32 or 128 neurons. Two models have dropout, the others do not.
+	The sigmoid activation function used is defined as:
+	\begin{equation}
+		\sigma(x) = \frac{1}{1+e^{-x}}
+	\end{equation}
+	\item 4 Recurrent Neural Networks (RNNs), with 1 Long Short-Term Memory (LSTM) hidden layer containing 32 or 128 neurons. Two models have 20\% dropout, the other two do not.
 	\item As a baseline for performance and neuroplasticity, several people were also used.
 \end{enumerate}
 
 It was decided that Convolutional Neural Networks (CNNs) should not be included in the experiment, as although they are a very popular type of neural network in image processing, they only work with multidimensional spatial or temporal data (their primary use-cases are in computer vision, optical character recognition, and audio analysis), and would require significant structural change to compute problems with non-temporal data (changing the convolutional layers between one and two dimensions at runtime). This means that they cannot feasibly compute linear regression or non-temporal classification functions without having their kernel layers configured to apply no transformation to the data (by having nil values for all kernel cells except the centre, which would have a 1, such that each kernel operation acts similarly to a cat program) or by being configured to operate in only one dimension.
 
-Each of the above models is tested against the following classification and regression problems:
+All of the above models were tested against the following classification and regression problems:
 
 \begin{enumerate}
 	\item Handwritten digit recognition (using the MNIST dataset\footnote{The MNIST dataset is available at: \texttt{http://yann.lecun.com/exdb/mnist/}})
 	\item Iris flower classification (using Fisher's dataset\footnote{The iris dataset is available at: \texttt{http://archive.ics.uci.edu/ml/datasets/Iris}} (\cite{uciml2007}))
 	\item Sentiment analysis (using the Large Movie Review Dataset\footnote{The movie review dataset is available at \texttt{http://ai.stanford.edu/~amaas/data/sentiment/}} (\cite{maas2011imdb}))
-	\item Breast cancer diagnosis (using the University of Wisconsin dataset\footnote{The breast cancer diagnosis dataset is available at: \texttt{http://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)}})
+	\item Breast cancer diagnosis (using the University of Wisconsin dataset\footnote{The breast cancer diagnosis dataset is available at: \texttt{http://archive.ics.uci.edu/ml/datasets/Breast+Cancer+\newline Wisconsin+(Diagnostic)}})
 \end{enumerate}
-
-Experts in each problem domain (native English speakers for the MNIST and sentiment analysis problems, and physicians for the breast cancer diagnosis problem) were tested against each of the aforementioned problems, meaning due to the varying nature and medium in which the datasets above are presented (meaning different cortices of the human brain are used for different problem domains) the human participants had a significant advantage over their machine counterparts. (See \emph{Human Data Presentation Details} on page \pageref{sec:Appendix_II} for more information on the way in which data was presented to participants in this investigation.)
 
 The experiment was conducted in two phases for each combination of model (artificial or biological) and problem: the training phase, and the testing phase.
 
-In the training phase, the artificial models were fed data along with the desired results from the respective datasets and left to their own devices, to implement their own optimisation algorithms. The participants were given the data similarly; however the data was arranged in a more familiar format (!).
+In the training phase, the artificial models were fed data along with the desired results from the respective datasets and left to their own devices, to implement their own optimisation algorithms. The participants were given the data similarly; however the data was arranged in formats appropriate to the specific problem. (See \emph{Human Data Presentation Details} on page \pageref{sec:Appendix_II} for more information on the way in which data was presented to participants in this investigation.)
+
+Human experts in each problem domain (native English speakers for the MNIST and sentiment analysis problems, and physicians for the breast cancer diagnosis problem) were tested against each of the aforementioned problems, meaning due to the varying nature and medium in which the datasets above are presented (meaning different cortices of the human brain are used for different problem domains) the human participants had a significant advantage over their machine counterparts. 
 
 In the testing phase, each model and participant was given data as in the previous stage, however the desired results were omitted, and the models and participants had to make predictions (or classifications, depending on the nature of the problem) based on inferences made from the training data. Note that participants were allowed to keep a copy of the training data for reference, due to memory and time limitations.
 
@@ -149,7 +152,13 @@ For each model-problem combination, the performance was measured as the accuracy
 
 The human error rates for the MNIST problem and breast cancer diagnosis were sourced from other literature; according to \cite{simard1993efficient}, the human MNIST accuracy averages at about 98.5\% (keeping in mind many of the samples are barely legible and written by high school students), and according to \cite{mangasarian1995breast} the accuracy of fine needle aspiration cytology (the method that ANNs in this investigation were trained to perform) as practiced by physicians averages at 82\%.
 
-\textit{Note: in the following charts, model names are abbreviated such that a Multi-Layer Perceptron (MLP) with 2 hidden layers filled with 256 neurons and with dropout is denoted as \textit{MLP 256D,256D}, and without dropout as \textit{MLP 256,256}.}
+\textit{Note: in the following tables and charts, model names are abbreviated such that a Multi-Layer Perceptron (MLP) with 2 hidden layers filled with 256 neurons and with dropout is denoted as \textit{MLP 256D,256D}, and without dropout as \textit{MLP 256,256}.}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{results.png}
+	\label{fig:results}
+\end{figure}
 
 \begin{figure}[H]
 	\centering
@@ -201,18 +210,7 @@ However, overall the human brain performed the best in this experiment. Whilst m
 
 All in all, this experiment has shown that state-of-the-art artificial intelligence techniques, despite having superhuman results in very narrow problem domains, are far from achieving general intelligence, at least given current hardware. The human brain still has 7 orders of magnitude more neurons than the most expansive of the models utilised in this experiment (1024 neurons compared to approximately 100 billion (\cite{herculano2009human})), and has mechanisms at play so complex that researchers have struggled even to fully simulate the brain of the C.Elegans, a transparent worm with only 959 neurons, whose connectome has been fully mapped for decades (\cite{wormwiring2012}). At the current point in time, neither the software to supervise the training of an AGI nor the hardware to implement the data flow of the network (let alone the training, which is several orders of magnitude more computationally expensive) exists, and will not for many decades at the current rate of progress.
 
-\begin{enumerate}
-	\item Sigmoid, ReLU, heaviside
-	\item Fix method, make reproducible, mention variables
-	\item Human data
-	\item Rubric
-	\item Fix (!)s
-	\item Tables?
-	\item Charts
-	\item Use neuroplasticity as a training target? Train hyper-parameters?
-	\item Investigate better measures of neuroplasticity?
-	\item Fonts
-\end{enumerate}
+Some possibilities for further research include trying to create a better metric for neuroplasticity which could possibly be used as a training target for new neural network architectures, in addition to simple performance. As using standard deviation for a metic allows a network with a consistent 50\% accuracy across the board to be judged more neuroplastic than a network which performs in the 80-95\% performance range, a better metric would need to be used to properly judge a network on neuroplasticity alone. Additionally, adjusting hyper-parameters through a process similar to SGD (meta-SGD, if you will) using an improved neuroplasticity metric as a cost function would prove interesting, as currently hyper-parameters are chosen by hand by supervisors based on inferences they have made whilst training neural networks of similar architectures, although unless a method similar to backpropagation could be used to cheaply estimate the error gradient of change in hyper-parameters, this would prove too computationally expensive for current hardware (as a network would have to be trained every step of the process, making the process many orders of magnitude more computationally expensive).
 
 \section{Appendices}
 
@@ -221,7 +219,7 @@ All in all, this experiment has shown that state-of-the-art artificial intellige
 
 All of the deep learning models tested were implemented in the Python 3 programming language, using the Keras machine learning library with a TensorFlow backend. It was decided to use a stable machine learning framework such as Keras to create easily reproducible results and to make it much easier to verify that the programs used in the experiment do not have any flaws undermining their validity.
 
-The Python 3 source code files for all of the aforementioned artificial models are available online through the Git (a programming version control system) repository hosted at following URL: \texttt{https://github.com/Tobsta/ScienceFair/tree/master/src}. Each overarching model architecture (ANN, MLP, RNN) has its own file (\texttt{src/ann.py}, et cetera) which accepts a loaded dataset and hyper-parameters from the main program, and each dataset has its own file which serves to load it from memory (\texttt{src/mnist.py}, et cetera). The main program which coordinates the interaction between the models and the datasets is in the file \texttt{src/main.py}, which can be run in a terminal using the command \texttt{python3 main.py}. The program's dependencies include Tensorflow (\texttt{tensorflow-gpu==1.5.0} used in testing), Keras, and numpy; all of which may be installed using Python's \texttt{pip} package manager.
+The Python 3 source code files for all of the aforementioned artificial models are available online through the Git (a programming version control system) repository hosted at following URL: \texttt{https://github.com/ Tobsta/ScienceFair/tree/master/src}. Each overarching model architecture (ANN, MLP, RNN) has its own file (\texttt{src/ann.py}, et cetera) which accepts a loaded dataset and hyper-parameters from the main program, and each dataset has its own file which serves to load it from memory (\texttt{src/mnist.py}, et cetera). The main program which coordinates the interaction between the models and the datasets is in the file \texttt{src/main.py}, which can be run in a terminal using the command \texttt{python3 main.py}. The program's dependencies include Tensorflow (\texttt{tensorflow-gpu==1.5.0} used in testing), Keras, and numpy; all of which may be installed using Python's \texttt{pip} package manager.
 
 \label{sec:Appendix_II}
 \subsection{Appendix II: Human Data Presentation Details}
